@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #009edd;
+        stroke-linecap: round;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 15.62;
+      }
+    </style>
+  </defs>
+  <polyline class="cls-1" points="39.72 14.04 50 8.04 60.28 14.04"/>
+  <line class="cls-2" x1="50" y1="8.04" x2="50" y2="23.03"/>
+  <polyline class="cls-1" points="60.28 85.96 50 91.96 39.72 85.96"/>
+  <line class="cls-2" x1="50" y1="91.96" x2="50" y2="76.97"/>
+  <polyline class="cls-1" points="14.04 40.92 14.04 29.02 23.99 23.12"/>
+  <line class="cls-2" x1="14.04" y1="29.02" x2="26.64" y2="36.51"/>
+  <polyline class="cls-1" points="85.96 59.08 85.96 70.98 76.01 76.88"/>
+  <line class="cls-2" x1="85.96" y1="70.98" x2="73.36" y2="63.49"/>
+  <polyline class="cls-1" points="23.99 76.97 14.04 70.98 14.04 59.08"/>
+  <line class="cls-2" x1="14.04" y1="70.98" x2="26.52" y2="63.49"/>
+  <polyline class="cls-1" points="76.01 23.12 85.96 29.02 85.96 40.92"/>
+  <line class="cls-2" x1="85.96" y1="29.02" x2="73.36" y2="36.51"/>
+  <polyline class="cls-2" points="50 61.99 50 50 60.28 44.01"/>
+  <line class="cls-2" x1="50" y1="50" x2="39.72" y2="44.01"/>
+</svg>

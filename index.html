@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tork - Toallas de Manos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Three.js and Loaders for AR -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <!-- Model Viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- Header -->
+        <header class="main-header">
+            <img src="./assets/logos/logo.png" alt="Logo de Tork" class="logo-image">
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="top-nav">
+            <button class="back-button">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <h1 class="nav-title" id="nav-title">Toallas de Manos</h1>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            
+            <h2 class="product-title" id="product-title">Tork Matic&reg; Dispensador Toalla en Rollo</h2>
+
+            <div class="product-image-container">
+                <!-- Using a generic placeholder since we dont have the asset -->
+                <!-- You can replace this src with the actual image of the product -->
+                <model-viewer id="product-viewer" src="./models/Tork Matic Dispensador Toalla en Rollo - Negro - 0.001.glb" ios-src="./models/Tork Matic Dispensador Toalla de Manos en Rollo - Negro - 0.001.usdz" alt="Tork Matic Dispensador" class="product-image" disable-pan camera-controls shadow-intensity="0.0" disable-zoom ar ar-modes="webxr scene-viewer quick-look" ar-placement="wall" camera-orbit="-18deg 78deg auto" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 100deg auto">
+                    <button slot="hotspot-dot+X-Y+Z" class="dot hide" data-position="0 0 0" data-normal="1 0 0"></button>
+                    <button slot="hotspot-dim+X-Y" class="dim hide" data-position="0 0 0" data-normal="1 0 0"></button>
+                    <button slot="hotspot-dot+X-Y-Z" class="dot hide" data-position="0 0 0" data-normal="1 0 0"></button>
+                    <button slot="hotspot-dim+X-Z" class="dim hide" data-position="0 0 0" data-normal="1 0 0"></button>
+                    <button slot="hotspot-dot+X+Y-Z" class="dot hide" data-position="0 0 0" data-normal="0 1 0"></button>
+                    <button slot="hotspot-dim+Y-Z" class="dim hide" data-position="0 0 0" data-normal="0 1 0"></button>
+                    <button slot="hotspot-dot-X+Y-Z" class="dot hide" data-position="0 0 0" data-normal="0 1 0"></button>
+                    <button slot="hotspot-dim-X-Z" class="dim hide" data-position="0 0 0" data-normal="-1 0 0"></button>
+                    <button slot="hotspot-dot-X-Y-Z" class="dot hide" data-position="0 0 0" data-normal="-1 0 0"></button>
+                    <button slot="hotspot-dim-X-Y" class="dim hide" data-position="0 0 0" data-normal="-1 0 0"></button>
+                    <button slot="hotspot-dot-X-Y+Z" class="dot hide" data-position="0 0 0" data-normal="-1 0 0"></button>
+                    
+                    <svg id="dimLines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="dimensionLineContainer hide">
+                        <line class="dimensionLine"></line>
+                        <line class="dimensionLine"></line>
+                        <line class="dimensionLine"></line>
+                        <line class="dimensionLine"></line>
+                        <line class="dimensionLine"></line>
+                    </svg>
+                </model-viewer>
+
+                <div class="fab-container">
+                    <div class="fab-menu" id="fab-menu">
+                        <!-- Primary Menu -->
+                        <div id="menu-level-1" class="menu-level">
+                            <div class="fab-item">
+                                <button class="fab-action" id="btn-info">
+                                    <img src="./assets/icon/info.svg" alt="Materiales" class="fab-icon-img">
+                                </button>
+                                <span class="fab-label">Info</span>
+                            </div>
+                            <div class="fab-item">
+                                <button class="fab-action" id="btn-entornos">
+                                    <img src="./assets/icon/entornos.svg" alt="Materiales" class="fab-icon-img">
+                                </button>
+                                <span class="fab-label">Entornos</span>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Menu (shown when Info is clicked) -->
+                        <div id="menu-level-2" class="menu-level hidden">
+                            <div class="fab-item">
+                                <button class="fab-action" id="btn-detalles">
+                                    <img src="./assets/icon/detalles.svg" alt="Materiales" class="fab-icon-img">
+                                </button>
+                                <span class="fab-label">Detalles</span>
+                            </div>
+                            <div class="fab-item">
+                                <button class="fab-action" id="btn-tutorial">
+                                    <img src="./assets/icon/tutorial.svg" alt="Tutorial" class="fab-icon-img">
+                                </button>
+                                <span class="fab-label">Tutorial</span>
+                            </div>
+                            <div class="fab-item">
+                                <button class="fab-action" id="btn-medidas">
+                                    <img src="./assets/icon/medidas.svg" alt="Medidas" class="fab-icon-img" id="medidas-icon">
+                                    <img src="./assets/icon/cruz.svg" alt="Cerrar" class="fab-icon-img" id="medidas-icon-close" style="display: none; filter: brightness(0) invert(1);">
+                                </button>
+                                <span class="fab-label" id="medidas-label">Medidas</span>
+                            </div>
+                        </div>
+
+                        <!-- Tertiary Menu (shown when Entornos is clicked) -->
+                        <div id="menu-level-3" class="menu-level hidden">
+                            <div class="fab-item">
+                                <button class="fab-action fab-env-thumb" data-env="fondo1">
+                                    <img src="./assets/images/madera.jpg" alt="Madera" class="env-thumb-img">
+                                </button>
+                                <span class="fab-label">Madera</span>
+                            </div>
+                            <div class="fab-item">
+                                <button class="fab-action fab-env-thumb" data-env="fondo2">
+                                    <img src="./assets/images/marmol.jpg" alt="Mármol" class="env-thumb-img">
+                                </button>
+                                <span class="fab-label">Mármol</span>
+                            </div>
+                            <div class="fab-item">
+                                <button class="fab-action fab-env-thumb" data-env="fondo3">
+                                    <img src="./assets/images/ladrillo.jpg" alt="Ladrillo" class="env-thumb-img">
+                                </button>
+                                <span class="fab-label">Ladrillo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-button" id="toggle-fab">
+                        <i class="fa-regular fa-plus" id="fab-icon-plus"></i>
+                        <img src="./assets/icon/cruz.svg" alt="Cerrar" class="fab-icon-img" id="fab-icon-close" style="display: none;">
+                    </button>
+                    <span class="fab-main-label">Ver más</span>
+                </div>
+            </div>
+
+            <div class="product-details">
+                <div class="traffic-info">
+                    <img src="./assets/icon/Personas2.png" alt="Personas" class="traffic-icon-img" id="traffic-icon">
+                    <span id="traffic-label">Tráfico: alto</span>
+                </div>
+                
+                <hr class="separator">
+
+                <div class="options-section">
+                    <h3 class="section-title">Color del dispensador:</h3>
+                    <div class="color-options">
+                        <button class="color-btn active" data-color="black">
+                            <span class="color-circle black-color"></span>
+                            <span class="color-label">Negro</span>
+                        </button>
+                        <button class="color-btn" data-color="white">
+                            <span class="color-circle white-color"></span>
+                            <span class="color-label">Blanco</span>
+                        </button>
+                        <button class="color-btn" data-color="steel" style="display: none;">
+                            <span class="color-circle steel-color"></span>
+                            <span class="color-label">Acero</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="options-section">
+                    <h3 class="section-title">Diseño:</h3>
+                    <div class="design-thumbnails">
+                        <button class="thumb-btn active" data-id="design-1">
+                            <!-- We can just use empty spans styled with css if no images exist, or a generic placeholder -->
+                            <div class="mock-thumb flex-center"><img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Negro.jpg" alt=""></div>
+                        </button>
+                        <button class="thumb-btn" data-id="design-2">
+                            <div class="mock-thumb flex-center"><img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Acero_Inoxidable.jpg" alt=""></div>
+                        </button>
+                        <button class="thumb-btn" data-id="design-3">
+                            <div class="mock-thumb flex-center"><img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Sensor_Intuition_Acero_Inoxidable.jpg" alt=""></div>
+                        </button>
+                        <button class="thumb-btn" data-id="design-4">
+                            <div class="mock-thumb flex-center"><img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Sensor_Intuition_Negro.jpg" alt=""></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-outline" id="btn-ar">
+                        <img src="./assets/icon/ar.svg" alt="Materiales" class="fab-icon-img">
+                        Ver en vivo
+                    </button>
+                    <button class="btn btn-primary" id="btn-buy">
+                        <img src="./assets/icon/rayo.svg" alt="Materiales" class="fab-icon-img">
+                        Compra ya
+                    </button>
+                </div>
+
+                <div class="details-section">
+                    <h3 class="section-title details-title">Detalles:</h3>
+                    <p class="description" id="product-description">
+                        Con sensor Intuition™ Dispensación sin contacto, una hoja a la vez.
+                    </p>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-logo">
+                <img src="./assets/logos/logo-essity.png" alt="Logo de Essity" class="essity-logo-image">
+            </div>
+        </footer>
+
+        <!-- Details Card Overlay -->
+        <div id="details-overlay" class="details-overlay hidden">
+            <div class="details-card-container">
+                <div class="details-card">
+                    <button id="details-close" class="details-close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <div id="detailsCarousel" class="details-carousel">
+                        <div class="carousel-inner" id="details-carousel-inner">
+                            <!-- Items populated by JS -->
+                        </div>
+                        
+                        <button class="carousel-control-prev" id="details-prev" type="button">
+                            <span class="carousel-control-prev-icon-custom">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                        </button>
+                        <button class="carousel-control-next" id="details-next" type="button">
+                            <span class="carousel-control-next-icon-custom">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="details-indicators" id="details-indicators">
+                        <!-- indicators populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tutorial Overlay -->
+        <div id="tutorial-overlay" class="tutorial-overlay hidden">
+            <div class="tutorial-container">
+                <button id="tutorial-close" class="details-close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="video-wrapper">
+                    <!-- This represents a video player as per the reference image -->
+                    <div class="video-header">
+                        <img src="./assets/logos/logo.png" alt="Logo" class="video-logo">
+                        <div class="video-title-group">
+                            <h4>Tork Matic® Guía Instalación</h4>
+                            <p>Tork México & Centroamérica</p>
+                        </div>
+                    </div>
+                    <div class="video-player-container">
+                        <!-- ENLACE CORREGIDO PARA EMBED -->
+                        <iframe 
+                            src="https://www.youtube.com/embed/3J1tc1fT32w" 
+                            title="Tork Matic® Tutorial" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                             class="video-iframe">
+                        </iframe>
+                    </div>
+                    <div class="video-footer-mock">
+                        <div class="share-btn-mock"><i class="fa-solid fa-share-nodes"></i></div>
+                        <div class="watch-youtube-mock">Watch on <i class="fa-brands fa-youtube"></i> YouTube</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Site Onboarding Tutorial -->
+        <div id="onboarding-overlay" class="onboarding-overlay hidden">
+            <div id="onboarding-spotlight" class="onboarding-spotlight"></div>
+            <div id="onboarding-card" class="onboarding-card">
+                <p id="onboarding-text"></p>
+                <div class="onboarding-footer">
+                    <span id="onboarding-step-indicator">1 / 3</span>
+                    <button id="onboarding-next" class="btn-onboarding">Siguiente</button>
+                </div>
+            </div>
+            <button id="onboarding-skip" class="onboarding-skip">Saltar tutorial</button>
+        </div>
+    </div> <!-- Closing app-container -->
+
+    <!-- Custom logic -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

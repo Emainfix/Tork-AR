@@ -1,0 +1,1252 @@
+:root {
+    --primary-blue: #009FE3;
+    --dark-blue: #0A3254;
+    --text-blue: #0f4b81;
+    --white: #ffffff;
+    --border-gray: #e0e0e0;
+    --font-stack: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: #f5f5f5; /* Light background for the outer area if viewed on desktop */
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--white);
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    padding-bottom: 60px; /* Space for footer */
+}
+
+@media (min-width: 1200px) {
+    body {
+        padding: 40px 0;
+    }
+    .app-container {
+        min-height: calc(100vh - 80px);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+}
+
+/* Header (Logo) */
+.main-header {
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--dark-blue);
+    letter-spacing: 1px;
+    border-top: 3px solid var(--dark-blue);
+    border-bottom: 3px solid var(--dark-blue);
+    padding: 0 5px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.logo-subtext {
+    font-size: 10px;
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+.logo-image {
+    height: 35px;
+    width: auto;
+}
+
+/* Navigation Bar */
+.top-nav {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 22px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    transform: translateX(-15px); /* Offset to perfectly center considering the back button */
+}
+
+/* Main Content */
+.content {
+    padding: 20px 25px;
+}
+
+.product-title {
+    color: var(--text-blue);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.content-fade {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Product Image Section */
+.product-image-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 100%;
+    height: 280px;
+    object-fit: contain;
+    --poster-color: transparent;
+}
+
+#product-viewer::part(default-progress-bar),
+#product-viewer::part(default-ar-button) {
+    display: none;
+}
+
+/* Dynamic Technical Dimensions */
+.dot {
+    display: none;
+}
+
+.dim {
+    background: #fff;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    max-width: 128px;
+    overflow-wrap: break-word;
+    padding: 0.5em 1em;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    transform: translate3d(-50%, -50%, 0);
+    pointer-events: none;
+    --min-hotspot-opacity: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .dim {
+        font-size: 3vw;
+    }
+}
+
+.dimensionLineContainer {
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.dimensionLine {
+    stroke: #00b4ff;
+    stroke-width: 2;
+    stroke-dasharray: 4;
+}
+
+.hide {
+    display: none !important;
+}
+
+:not(:defined)>* {
+    display: none;
+}
+
+
+/* Dimension Hotspots & Lines */
+.dimension-hotspot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, visibility 0.3s;
+    user-select: none;
+}
+
+.dimension-hotspot span {
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 10px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* Technical Dashed Lines */
+.dimension-hotspot::after {
+    content: '';
+    position: absolute;
+    border: 1px dashed #00b4ff;
+    z-index: 1;
+}
+
+/* Specific line orientations and lengths to "connect" them visually */
+button[slot="hotspot-height"]::after {
+    height: 200px;
+    width: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button[slot="hotspot-width"]::after {
+    width: 180px;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button[slot="hotspot-depth"]::after {
+    width: 140px;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.dimension-hotspot.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.fab-container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.fab-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    padding: 0 10px; /* Space so button shadows don't clip */
+}
+
+.fab-menu.expanded {
+    opacity: 1;
+    visibility: visible;
+    max-height: 400px;
+    margin-bottom: 15px;
+    pointer-events: auto;
+    padding: 10px 10px 0;
+}
+
+.menu-level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.menu-level.hidden {
+    display: none;
+}
+
+/* Measures Mode: Hide everything except the Medidas button itself */
+.fab-container.measures-mode .fab-item:not(:has(#btn-medidas)),
+.fab-container.measures-mode .add-button,
+.fab-container.measures-mode .fab-main-label {
+    display: none !important;
+}
+
+.fab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fab-action {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.fab-action:active {
+    transform: scale(0.95);
+}
+
+.fab-icon-img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.fab-env-thumb {
+    padding: 0;
+    overflow: hidden;
+    border: 3px solid var(--primary-blue);
+    background-color: transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.fab-env-thumb.active {
+    background-color: var(--primary-blue);
+    border: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.fab-env-thumb.active .env-thumb-img {
+    opacity: 0;
+}
+
+.env-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.fab-label {
+    color: var(--primary-blue);
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.add-button {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    display: grid !important;
+    place-items: center !important;
+    position: relative;
+    padding: 0 !important;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.add-button i,
+.add-button img {
+    grid-area: 1 / 1;
+    margin: 0 !important;
+    display: block;
+}
+
+.add-button i {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.add-button img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    /* This filter converts the white stroke of cruz.svg to the primary blue #009FE3 */
+    filter: brightness(0) saturate(100%) invert(48%) sepia(93%) saturate(2500%) hue-rotate(170deg) brightness(90%) contrast(100%);
+}
+
+.add-button.expanded {
+    background-color: var(--white);
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    box-shadow: none;
+}
+
+.fab-main-label {
+    color: var(--primary-blue);
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* Product Details */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.traffic-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-blue);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.traffic-info i,
+.traffic-icon-img {
+    width: 26px;
+    height: 26px;
+    font-size: 26px;
+    color: var(--primary-blue);
+    object-fit: contain;
+}
+
+.separator {
+    width: 100%;
+    border: none;
+    border-top: 1px dotted #ccc;
+    margin-bottom: 15px;
+}
+
+.description {
+    text-align: left;
+    color: var(--text-blue);
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+/* Product Options */
+.options-section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    color: var(--dark-blue);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.color-options,
+.design-thumbnails {
+    display: flex;
+    gap: 15px;
+}
+
+.color-btn {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.color-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.color-btn.active .color-circle {
+    border: 2px solid var(--dark-blue);
+}
+
+.color-circle::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.white-color::before {
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+
+.black-color::before {
+    background-color: #111;
+}
+
+.steel-color::before {
+    background-color: #8E8E8E;
+}
+
+.color-label {
+    font-size: 12px;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+.thumb-btn {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.thumb-btn.active {
+    border: 2px solid var(--dark-blue);
+    padding: 2px;
+}
+
+.mock-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 31px;
+    overflow: hidden; /* Added to ensure image doesn't bleed out */
+}
+
+.mock-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-section {
+    width: 100%;
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* Action Buttons */
+.action-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: auto; /* Permite que el hover funcione */
+    background-color: #f0f0f0 !important;
+    border-color: #ccc !important;
+    color: #888 !important;
+}
+
+.btn:disabled img {
+    filter: grayscale(1) brightness(0.8);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+}
+/* Tooltip rápido para botón desactivado */
+#btn-ar[data-tooltip]:disabled {
+    position: relative;
+}
+
+#btn-ar[data-tooltip]:disabled:hover::after {
+    content: attr(data-tooltip); /* Usamos el atributo data-tooltip */
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    width: max-content;
+    max-width: 250px;
+    white-space: normal;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 20000;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeInFast 0.2s forwards;
+}
+
+/* Pequeña flecha para el tooltip */
+#btn-ar[data-tooltip]:disabled:hover::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: var(--dark-blue);
+    z-index: 20000;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeInFast 0.2s forwards;
+}
+
+@keyframes fadeInFast {
+    to { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+.btn-outline .fab-icon-img {
+    width: 26px;
+    height: 26px;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary .fab-icon-img {
+    width: 26px;
+    height: 26px;
+}
+
+/* Footer */
+.main-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--white);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.essity-dots {
+    display: flex;
+    flex-wrap: wrap;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.dot.d1 {
+    background-color: #D22630;
+    top: 0;
+    left: 0;
+}
+
+.dot.d2 {
+    background-color: #00A6CE;
+    top: 0;
+    right: 0;
+}
+
+.dot.d3 {
+    background-color: #002A5C;
+    bottom: 0;
+    left: 0;
+}
+
+.essity-text {
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--dark-blue);
+    letter-spacing: -1px;
+}
+
+.essity-logo-image {
+    height: 15px;
+    width: auto;
+}
+
+/* Responsive Desktop Styles */
+@media (min-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 50px 80px;
+    }
+
+    .product-title {
+        width: 100%;
+        font-size: 32px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .product-image-container {
+        width: 100%;
+        max-width: 500px; /* Keep image from getting too huge */
+        margin-bottom: 0px;
+    }
+
+    .product-details {
+        width: 100%;
+        max-width: 800px;
+        align-items: center; /* Center everything like mobile */
+        padding-top: 10px;
+    }
+    
+    .traffic-info {
+        font-size: 18px;
+    }
+
+    .description {
+        text-align: left;
+        font-size: 18px;
+        padding: 0;
+        margin-bottom: 35px;
+    }
+
+    .action-buttons {
+        flex-direction: column; /* Stack buttons like mobile */
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+        max-width: 400px; /* Limit button width on desktop */
+    }
+
+    .btn {
+        width: 100%;
+        padding: 16px 30px;
+        font-size: 20px;
+    }
+    
+    .nav-title {
+        font-size: 22px;
+    }
+    
+    .logo-image {
+        height: 50px;
+    }
+}
+
+/* Details Card Overlay */
+.details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); 
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+.details-overlay.hidden {
+    display: none !important;
+}
+
+.details-card-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    pointer-events: auto;
+    /* Remove vertical shift to keep it truly centered and "fixed" in view */
+    transform: none; 
+}
+
+.details-card {
+    background-color: var(--white);
+    border: 3px solid var(--primary-blue);
+    border-radius: 40px;
+    padding: 30px 20px 40px;
+    position: relative;
+    min-height: 250px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.details-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s;
+}
+
+.details-close-btn:active {
+    transform: scale(0.9);
+}
+
+/* Custom Carousel logic CSS */
+.details-carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateX(20px);
+}
+
+.carousel-item.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.carousel-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 40px;
+    height: 100%;
+    justify-content: center;
+}
+
+.carousel-page h4 {
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.carousel-page p {
+    color: var(--text-blue);
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Custom Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 24px;
+    z-index: 5;
+    transition: color 0.2s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    color: var(--primary-blue);
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+/* Custom Indicators */
+.details-indicators {
+    position: absolute;
+    bottom: 12px; /* Close to the bottom edge */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.dot-indicator.active {
+    background-color: var(--primary-blue);
+    transform: scale(1.1);
+}
+
+.ui-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+@media (min-width: 768px) {
+    .details-card {
+        max-width: 500px;
+    }
+}
+
+/* Tutorial Overlay */
+.tutorial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); 
+    z-index: 3100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+.tutorial-overlay.hidden {
+    display: none !important;
+}
+
+.tutorial-container {
+    width: 95%; 
+    padding: 0;
+    max-width: 650px; 
+    position: relative;
+    pointer-events: auto;
+    transform: none; 
+}
+
+.video-wrapper {
+    background-color: #A9CCE3; /* Light blue background like the reference image */
+    border-radius: 12px;
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.video-header {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.video-logo {
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    object-fit: contain;
+    padding: 2px;
+}
+
+.video-title-group h4 {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.video-title-group p {
+    color: #eee;
+    font-size: 11px;
+    margin: 0;
+}
+
+.video-player-container {
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+}
+
+.video-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-play-icon {
+    display: none; /* Already has YouTube's original play button */
+}
+
+.video-footer-mock {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.share-btn-mock {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.watch-youtube-mock {
+    background-color: rgba(25, 25, 25, 0.8);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.watch-youtube-mock i {
+    font-size: 16px;
+}
+/* Site Onboarding Tutorial */
+.onboarding-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.onboarding-overlay.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.onboarding-spotlight {
+    position: absolute;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 10001;
+}
+
+.onboarding-card {
+    position: absolute;
+    background: white;
+    padding: 24px;
+    border: 3px solid var(--primary-blue);
+    border-radius: 40px;
+    width: 280px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    z-index: 10005;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.onboarding-card p {
+    color: var(--dark-blue);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.onboarding-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#onboarding-step-indicator {
+    font-size: 13px;
+    color: #999;
+}
+
+.btn-onboarding {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.onboarding-skip {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    z-index: 10006;
+}
+
+.onboarding-highlighted {
+    z-index: 10002 !important;
+    position: relative !important;
+    pointer-events: none !important;
+}
