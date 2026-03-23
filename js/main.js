@@ -349,6 +349,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update 3D Viewer
         if (productViewer && paths.glb) {
+            // Only update and show loader if the source is actually different
+            const currentSrc = productViewer.getAttribute('src');
+            const newSrc = paths.glb.startsWith('./') ? paths.glb.substring(2) : paths.glb; // Normalize path for comparison if needed
+            
+            // Check if it's already the same src to avoid unnecessary flickering
+            if (!productViewer.src.includes(newSrc)) {
+                const mainLoader = document.getElementById('main-loader');
+                if (mainLoader) mainLoader.classList.remove('hidden');
+            }
+
             productViewer.src = paths.glb;
             if (paths.usdz) productViewer.setAttribute('ios-src', paths.usdz);
         }
@@ -386,6 +396,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (productViewer) {
         productViewer.addEventListener('load', () => {
+            // Hide loader
+            const mainLoader = document.getElementById('main-loader');
+            if (mainLoader) mainLoader.classList.add('hidden');
+
             const center = productViewer.getBoundingBoxCenter();
             const size = productViewer.getDimensions();
             const x2 = size.x / 2;

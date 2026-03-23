@@ -29,7 +29,10 @@
         
         <!-- Header -->
         <header class="main-header">
-            <img src="./assets/logos/logo.png" alt="Logo de Tork" class="logo-image">
+            <div class="image-wrapper" style="height: 35px; width: auto;">
+                <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                <img src="./assets/logos/logo.png" alt="Logo de Tork" class="logo-image" onload="this.previousElementSibling.classList.add('hidden')">
+            </div>
         </header>
 
         <!-- Navigation Bar -->
@@ -48,6 +51,12 @@
             <div class="product-image-container">
                 <!-- Using a generic placeholder since we dont have the asset -->
                 <!-- You can replace this src with the actual image of the product -->
+                
+                <!-- Loading Spinner -->
+                <div id="main-loader" class="loader-container">
+                    <div class="loading-spinner"></div>
+                </div>
+
                 <model-viewer id="product-viewer" src="./models/Tork Matic Dispensador Toalla en Rollo - Negro - 0.001.glb" ios-src="./models/Tork Matic Dispensador Toalla de Manos en Rollo - Negro - 0.001.usdz" alt="Tork Matic Dispensador" class="product-image" disable-pan camera-controls shadow-intensity="0.0" disable-zoom ar ar-modes="webxr scene-viewer quick-look" ar-placement="wall" camera-orbit="-18deg 78deg auto" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 100deg auto">
                     <button slot="hotspot-dot+X-Y+Z" class="dot hide" data-position="0 0 0" data-normal="1 0 0"></button>
                     <button slot="hotspot-dim+X-Y" class="dim hide" data-position="0 0 0" data-normal="1 0 0"></button>
@@ -115,19 +124,28 @@
                         <div id="menu-level-3" class="menu-level hidden">
                             <div class="fab-item">
                                 <button class="fab-action fab-env-thumb" data-env="fondo1">
-                                    <img src="./assets/images/madera.jpg" alt="Madera" class="env-thumb-img">
+                                    <div class="image-wrapper">
+                                        <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                                        <img src="./assets/images/madera.jpg" alt="Madera" class="env-thumb-img" onload="this.previousElementSibling.classList.add('hidden')">
+                                    </div>
                                 </button>
                                 <span class="fab-label">Madera</span>
                             </div>
                             <div class="fab-item">
                                 <button class="fab-action fab-env-thumb" data-env="fondo2">
-                                    <img src="./assets/images/marmol.jpg" alt="Mármol" class="env-thumb-img">
+                                    <div class="image-wrapper">
+                                        <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                                        <img src="./assets/images/marmol.jpg" alt="Mármol" class="env-thumb-img" onload="this.previousElementSibling.classList.add('hidden')">
+                                    </div>
                                 </button>
                                 <span class="fab-label">Mármol</span>
                             </div>
                             <div class="fab-item">
                                 <button class="fab-action fab-env-thumb" data-env="fondo3">
-                                    <img src="./assets/images/ladrillo.jpg" alt="Ladrillo" class="env-thumb-img">
+                                    <div class="image-wrapper">
+                                        <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                                        <img src="./assets/images/ladrillo.jpg" alt="Ladrillo" class="env-thumb-img" onload="this.previousElementSibling.classList.add('hidden')">
+                                    </div>
                                 </button>
                                 <span class="fab-label">Ladrillo</span>
                             </div>
@@ -143,7 +161,10 @@
 
             <div class="product-details">
                 <div class="traffic-info">
-                    <img src="./assets/icon/Personas2.png" alt="Personas" class="traffic-icon-img" id="traffic-icon">
+                    <div class="image-wrapper" style="width: 26px; height: 26px;">
+                        <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                        <img src="./assets/icon/Personas2.png" alt="Personas" class="traffic-icon-img" id="traffic-icon" onload="this.previousElementSibling.classList.add('hidden')">
+                    </div>
                     <span id="traffic-label">Tráfico: alto</span>
                 </div>
                 
@@ -171,17 +192,28 @@
                     <h3 class="section-title">Diseño:</h3>
                     <div class="design-thumbnails">
                         <button class="thumb-btn active" data-id="design-1">
-                            <!-- We can just use empty spans styled with css if no images exist, or a generic placeholder -->
-                            <div class="mock-thumb flex-center"><img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Negro.jpg" alt=""></div>
+                            <div class="mock-thumb flex-center">
+                                <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                                <img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Negro.jpg" alt="" onload="this.previousElementSibling.classList.add('hidden')">
+                            </div>
                         </button>
                         <button class="thumb-btn" data-id="design-2">
-                            <div class="mock-thumb flex-center"><img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Acero_Inoxidable.jpg" alt=""></div>
+                            <div class="mock-thumb flex-center">
+                                <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                                <img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Acero_Inoxidable.jpg" alt="" onload="this.previousElementSibling.classList.add('hidden')">
+                            </div>
                         </button>
                         <button class="thumb-btn" data-id="design-3">
-                            <div class="mock-thumb flex-center"><img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Sensor_Intuition_Acero_Inoxidable.jpg" alt=""></div>
+                            <div class="mock-thumb flex-center">
+                                <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                                <img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Sensor_Intuition_Acero_Inoxidable.jpg" alt="" onload="this.previousElementSibling.classList.add('hidden')">
+                            </div>
                         </button>
                         <button class="thumb-btn" data-id="design-4">
-                            <div class="mock-thumb flex-center"><img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Sensor_Intuition_Negro.jpg" alt=""></div>
+                            <div class="mock-thumb flex-center">
+                                <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                                <img src="./assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Sensor_Intuition_Negro.jpg" alt="" onload="this.previousElementSibling.classList.add('hidden')">
+                            </div>
                         </button>
                     </div>
                 </div>
@@ -210,7 +242,10 @@
         <!-- Footer -->
         <footer class="main-footer">
             <div class="footer-logo">
-                <img src="./assets/logos/logo-essity.png" alt="Logo de Essity" class="essity-logo-image">
+                <div class="image-wrapper" style="height: 15px; width: auto;">
+                    <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                    <img src="./assets/logos/logo-essity.png" alt="Logo de Essity" class="essity-logo-image" onload="this.previousElementSibling.classList.add('hidden')">
+                </div>
             </div>
         </footer>
 
@@ -262,13 +297,15 @@
                     </div>
                     <div class="video-player-container">
                         <!-- ENLACE CORREGIDO PARA EMBED -->
+                        <div class="loader-container"><div class="loading-spinner"></div></div>
                         <iframe 
                             src="https://www.youtube.com/embed/3J1tc1fT32w" 
                             title="Tork Matic® Tutorial" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             allowfullscreen
-                             class="video-iframe">
+                             class="video-iframe"
+                             onload="this.previousElementSibling.classList.add('hidden')">
                         </iframe>
                     </div>
                     <div class="video-footer-mock">
