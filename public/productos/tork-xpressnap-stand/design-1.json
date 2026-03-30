@@ -1,0 +1,44 @@
+{
+  "id": "design-1",
+  "productoId": "tork-xpressnap-stand",
+  "arPlacement": "floor",
+  "descripcion": "Dispensador de servilletas Xpressnap Stand, diseñado para tráfico alto en autoservicios.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Servilletas/Tork_Xpressnap_Dispensador_Stand/Tork_Xpressnap_Dispensador_Stand.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-na/product/6332000",
+  "tutorialUrl": "https://www.youtube.com/embed/lEaR1Z3qDqY",
+  "dimensiones": { "alto": "62.2 cm", "ancho": "20 cm", "prof": "32 cm" },
+  "paginas": [
+    {
+      "titulo": "Xpressnap Stand 1",
+      "contenido": "Dispensador ideal para restaurantes con servicio limitado que no ofrecen servilletas en la mesa."
+    },
+    {
+      "titulo": "Xpressnap Stand 2",
+      "contenido": "Protege las servilletas de cualquier suciedad o derrame."
+    },
+    {
+      "titulo": "Xpressnap Stand 3",
+      "contenido": "Cuenta con Ad A Glance, ventanilla para publicidad."
+    }
+  ],
+  "modelos": {
+    "black": {
+      "glb": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorStand/Tork_Dispensador_Servilleta_Xpressnap_Stand___Negro 0.001.glb",
+      "usdz": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorStand/Tork_Dispensador_Servilleta_Xpressnap_Stand___Negro 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-na/product/6332000",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorStand/Tork_Dispensador_Servilleta_Xpressnap_Stand___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorStand/Tork_Dispensador_Servilleta_Xpressnap_Stand___Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorStand/Tork_Dispensador_Servilleta_Xpressnap_Stand___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorStand/Tork_Dispensador_Servilleta_Xpressnap_Stand___Negro 0.001.usdz"
+          }
+        }
+      }
+    }
+  }
+}

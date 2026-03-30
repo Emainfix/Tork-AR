@@ -1,0 +1,100 @@
+{
+  "id": "design-1",
+  "productoId": "tork-matic-dispensador-rollo",
+  "descripcion": "Con sensor Intuition™ Dispensación sin contacto, una hoja a la vez.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Negro.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/551008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "37.3 cm", "ancho": "33.5 cm", "prof": "20.5 cm" },
+  "paginas": [
+    {
+      "titulo": "Matic 1",
+      "contenido": "Cuenta con un compartimento interior para colocar el remanente del rollo y consumirlo al 100%."
+    },
+    {
+      "titulo": "Matic 2",
+      "contenido": "Ofrece una dispensación de una hoja a la vez para mejorar la higiene y reducir el consumo."
+    },
+    {
+      "titulo": "Matic 3",
+      "contenido": "Cuenta con una ventana transparente para revisar cuando es necesario colocar un nuevo rollo."
+    }
+  ],
+  "modelos": {
+    "black": {
+      "glb": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - Negro - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - Negro - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/551008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          }
+        }
+      }
+    },
+    "white": {
+      "glb": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - Blanco - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - Blanco - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/551000?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          }
+        }
+      }
+    }
+  }
+}

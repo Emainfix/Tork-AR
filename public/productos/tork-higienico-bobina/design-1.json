@@ -1,0 +1,101 @@
+{
+  "id": "design-1",
+  "productoId": "tork-higienico-bobina",
+  "nombre": "Dispensador en Bobina",
+  "descripcion": "Dispensador clásico de alto rendimiento para papel higiénico en bobina.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Higienicos/Tork_Dispensador_Higiénico_en_Bobina/Tork_Dispensador_Higiénico_en_Bobina_Negro.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/554008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "36.0 cm", "ancho": "43.7 cm", "prof": "13.3 cm" },
+  "paginas": [
+    {
+       "titulo": "Resistencia",
+       "contenido": "Carcasa robusta ideal para entornos exigentes."
+    },
+    {
+       "titulo": "Higiene",
+       "contenido": "Solo se toca la hoja de papel que se va a utilizar."
+    },
+    {
+       "titulo": "Eficiencia",
+       "contenido": "Dispensador de gran capacidad para minimizar el mantenimiento."
+    }
+  ],
+  "modelos": {
+    "black": {
+      "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.glb",
+      "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/554008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.usdz"
+          }
+        }
+      }
+    },
+    "white": {
+      "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.glb",
+      "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/554000?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Blanco 0.001.usdz"
+          }
+        }
+      }
+    }
+  }
+}

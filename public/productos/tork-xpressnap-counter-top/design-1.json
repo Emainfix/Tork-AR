@@ -1,0 +1,44 @@
+{
+  "id": "design-1",
+  "productoId": "tork-xpressnap-counter-top",
+  "arPlacement": "floor",
+  "descripcion": "Dispensador de servilletas Xpressnap Counter top, ideal para mostradores.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Servilletas/Tork_Xpressnap_Dispensador_Counter_top/Tork_Xpressnap_Dispensador_Counter_top.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-na/product/6432000",
+  "tutorialUrl": "https://www.youtube.com/embed/lEaR1Z3qDqY",
+  "dimensiones": { "alto": "15,2 cm", "ancho": "20 cm", "prof": "32 cm" },
+  "paginas": [
+    {
+      "titulo": "Xpressnap CounterTop 1",
+      "contenido": "Cuenta con Ad A Glance, ventanilla para publicidad."
+    },
+    {
+      "titulo": "Xpressnap CounterTop 2",
+      "contenido": "Protege las servilletas de cualquier suciedad o derrame."
+    },
+    {
+      "titulo": "Xpressnap CounterTop 3",
+      "contenido": "Reduce el desperdicio con el dispensado uno a la vez."
+    }
+  ],
+  "modelos": {
+    "black": {
+      "glb": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorCounterTop/Tork_Dispensador_Servilleta_Xpressnap_Counter_top___Negro 0.001.glb",
+      "usdz": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorCounterTop/Tork_Dispensador_Servilleta_Xpressnap_Counter_top___Negro 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-na/product/6432000",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorCounterTop/Tork_Dispensador_Servilleta_Xpressnap_Counter_top___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorCounterTop/Tork_Dispensador_Servilleta_Xpressnap_Counter_top___Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorCounterTop/Tork_Dispensador_Servilleta_Xpressnap_Counter_top___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorCounterTop/Tork_Dispensador_Servilleta_Xpressnap_Counter_top___Negro 0.001.usdz"
+          }
+        }
+      }
+    }
+  }
+}

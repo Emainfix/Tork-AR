@@ -1,0 +1,44 @@
+{
+  "id": "design-1",
+  "productoId": "tork-xpressnap-tabletop",
+  "arPlacement": "floor",
+  "descripcion": "Dispensador de servilletas Xpressnap TableTop, perfecto para mesas de restaurantes.",
+  "trafico": "Tráfico: medio",
+  "thumbnail": "public/assets/images/Servilletas/Tork_Xpressnap_Dispensador_TableTop/Tork_Xpressnap_Dispensador_TableTop.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-na/product/6232000",
+  "tutorialUrl": "https://www.youtube.com/embed/lEaR1Z3qDqY",
+  "dimensiones": { "alto": "16,9 cm", "ancho": "20 cm", "prof": "15,2 cm" },
+  "paginas": [
+    {
+      "titulo": "Xpressnap Tabletop 1",
+      "contenido": "Protege las servilletas de cualquier suciedad o derrame."
+    },
+    {
+      "titulo": "Xpressnap Tabletop 2",
+      "contenido": "Reduce el desperdicio con el dispensado uno a la vez."
+    },
+    {
+      "titulo": "Xpressnap Tabletop 3",
+      "contenido": "Cuenta con Ad A Glance, ventanilla para publicidad."
+    }
+  ],
+  "modelos": {
+    "black": {
+      "glb": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorTableTop/Tork_Dispensador_Servilleta_Xpressnap_Table_Top___Negro 0.001.glb",
+      "usdz": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorTableTop/Tork_Dispensador_Servilleta_Xpressnap_Table_Top___Negro 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-na/product/6232000",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorTableTop/Tork_Dispensador_Servilleta_Xpressnap_Table_Top___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorTableTop/Tork_Dispensador_Servilleta_Xpressnap_Table_Top___Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorTableTop/Tork_Dispensador_Servilleta_Xpressnap_Table_Top___Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Servilletas/TorkXpressnapDispensadorTableTop/Tork_Dispensador_Servilleta_Xpressnap_Table_Top___Negro 0.001.usdz"
+          }
+        }
+      }
+    }
+  }
+}

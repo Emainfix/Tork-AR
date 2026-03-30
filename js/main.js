@@ -2,41 +2,8 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    let clickBuffer = null;
-
     // Detectar si es escritorio (PC o Mac)
     const isDesktop = !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-
-
-
-    // Precargamos el sonido para evitar latencia (sonido inmediato)
-    fetch('assets/sounds/boton.mp3')
-        .then(response => response.arrayBuffer())
-        .then(data => audioContext.decodeAudioData(data))
-        .then(buffer => {
-            clickBuffer = buffer;
-        })
-        .catch(e => console.error("Error cargando sonido del botón:", e));
-
-    const playClick = () => {
-        if (clickBuffer) {
-            // Aseguramos que el AudioContext esté activo (necesario en iPhone)
-            if (audioContext.state === 'suspended') {
-                audioContext.resume();
-            }
-
-            const source = audioContext.createBufferSource();
-            source.buffer = clickBuffer;
-
-            const gainNode = audioContext.createGain();
-            gainNode.gain.value = 0.25; // Volumen reducido al 25%
-
-            source.connect(gainNode);
-            gainNode.connect(audioContext.destination);
-            source.start(0);
-        }
-    };
 
     // FAB Toggle Logic
     const toggleFab = document.getElementById('toggle-fab');
@@ -53,8 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const fabContainer = document.querySelector('.fab-container');
 
         toggleFab.addEventListener('click', () => {
-            playClick();
-
             const isExpanded = toggleFab.classList.contains('expanded');
             const isLevel2Active = !level2.classList.contains('hidden');
             const isLevel3Active = !level3.classList.contains('hidden');
@@ -130,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (btnInfo && level1 && level2) {
             btnInfo.addEventListener('click', () => {
-                playClick();
                 level1.classList.add('hidden');
                 level2.classList.remove('hidden');
             });
@@ -138,120 +102,100 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (btnEntornos && level1 && level3) {
             btnEntornos.addEventListener('click', () => {
-                playClick();
                 level1.classList.add('hidden');
                 level3.classList.remove('hidden');
             });
         }
     }
 
-    // UI Option Selectors Logic
-    const colorBtns = document.querySelectorAll('.color-btn');
-    const thumbBtns = document.querySelectorAll('.thumb-btn');
+    // UI Selectors
     const productViewer = document.getElementById('product-viewer');
+    let colorBtns = document.querySelectorAll('.color-btn');
+    let thumbBtns = document.querySelectorAll('.thumb-btn');
     const navTitle = document.getElementById('nav-title');
     const productTitle = document.getElementById('product-title');
     const productDesc = document.getElementById('product-description');
     const trafficLabel = document.getElementById('traffic-label');
 
-    // Simple database to hold product information for each design
-    const productData = {
-        'design-1': {
-            description: 'Con sensor Intuition™ Dispensación sin contacto, una hoja a la vez.',
-            traffic: 'Tráfico: alto',
-            buyLink: 'https://www.bimobject.com/es/essity-eu/product/551008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign',
-            dimensions: { height: '37.3 cm', width: '33.5 cm', depth: '20.5 cm' },
-            pages: [
-                { title: 'Matic 1', content: 'Cuenta con un compartimento interior para colocar el remanente del rollo y consumirlo al 100%.' },
-                { title: 'Matic 2', content: 'Ofrece una dispensación de una hoja a la vez para mejorar la higiene y reducir el consumo.' },
-                { title: 'Matic 3', content: 'Cuenta con una ventana transparente para revisar cuando es necesario colocar un nuevo rollo.' }
-            ],
-            models: {
-                'black': {
-                    glb: './models/Tork Matic Dispensador Toalla de Manos en Rollo - Negro - 0.001.glb',
-                    usdz: './models/Tork Matic Dispensador Toalla de Manos en Rollo - Negro - 0.001.usdz',
-                    buyLink: 'https://www.bimobject.com/es/essity-eu/product/551008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign',
-                    envSuffixPreview: 'Tork Matic Dispensador Toalla de Manos en Rollo - Negro 01',
-                    envSuffixAR: 'Tork Matic Dispensador Toalla de Manos en Rollo - Negro'
-                },
-                'white': {
-                    glb: './models/Tork Matic Dispensador Toalla de Manos en Rollo - Blanco - 0.001.glb',
-                    usdz: './models/Tork Matic Dispensador Toalla de Manos en Rollo - Blanco - 0.001.usdz',
-                    buyLink: 'https://www.bimobject.com/es/essity-eu/product/551000?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign',
-                    envSuffixPreview: 'Tork Matic Dispensador Toalla de Manos en Rollo - Blanco 01',
-                    envSuffixAR: 'Tork Matic Dispensador Toalla de Manos en Rollo - Blanco'
-                }
-            }
-        },
-        'design-2': {
-            description: 'Diseño moderno de acero inoxidable con recubrimiento antihuellas.',
-            traffic: 'Tráfico: alto',
-            buyLink: 'https://www.bimobject.com/es/essity-na/product/461002?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign',
-            dimensions: { height: '40.1 cm', width: '34.5 cm', depth: '20.3 cm' },
-            pages: [
-                { title: 'Matic 1', content: 'Cuenta con un compartimento interior para colocar el remanente del rollo y consumirlo al 100%.' },
-                { title: 'Matic 2', content: 'Ofrece una dispensación de una hoja a la vez para mejorar la higiene y reducir el consumo.' },
-                { title: 'Matic 3', content: 'Cuenta con una ventana transparente para revisar cuando es necesario colocar un nuevo rollo.' }
-            ],
-            models: {
-                'steel': {
-                    glb: './models/Tork Matic Dispensador Toalla de Manos en Rollo - AceroInoxidable - 0.001.glb',
-                    usdz: './models/Tork Matic Dispensador Toalla de Manos en Rollo - AceroInoxidable - 0.001.usdz',
-                    envSuffixPreview: 'Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInoxidab',
-                    envSuffixAR: 'Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox'
-                }
-            }
-        },
-        'design-3': {
-            description: 'Ofrece una dispensación sin contacto, mejora la higiene y reduce el consumo.',
-            traffic: 'Tráfico: alto',
-            buyLink: 'https://www.bimobject.com/es/essity-eu/product/460001?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign',
-            dimensions: { height: '37.3 cm', width: '34.3 cm', depth: '20.4 cm' },
-            pages: [
-                { title: 'Matic 1', content: 'Cuenta con un compartimento interior para colocar el remanente del rollo y consumirlo al 100%.' },
-                { title: 'Matic 2', content: 'Ofrece una dispensación de una hoja a la vez para mejorar la higiene y reducir el consumo.' },
-                { title: 'Matic 3', content: 'Cuenta con una ventana transparente para revisar cuando es necesario colocar un nuevo rollo.' }
-            ],
-            models: {
-                'steel': {
-                    glb: './models/Tork Matic Dispensador Toalla de Manos en Rollo -  Sensor _ 0.001.glb',
-                    usdz: './models/Tork Matic Dispensador Toalla de Manos en Rollo -  Sensor _ 0.001.usdz',
-                    envSuffixPreview: 'Tork Matic Dispensador Toalla de Manos en Rollo -  Sensor I',
-                    envSuffixAR: 'Tork Matic Dispensador Toalla de Manos en Rollo -  Sensor I'
-                }
-            }
-        },
-        'design-4': {
-            description: 'Con sensor Intuition™ Dispensación sin contacto, una hoja a la vez.',
-            traffic: 'Tráfico: alto',
-            buyLink: 'https://www.bimobject.com/es/essity-eu/product/551108?utm_source=defaultSource&utm_medium=defaultMedium&campaign=defaultCampaign',
-            dimensions: { height: '36.8 cm', width: '33 cm', depth: '20.3 cm' },
-            pages: [
-                { title: 'Matic 1', content: 'Cuenta con un compartimento interior para colocar el remanente del rollo y consumirlo al 100%.' },
-                { title: 'Matic 2', content: 'Ofrece una dispensación de una hoja a la vez para mejorar la higiene y reducir el consumo.' },
-                { title: 'Matic 3', content: 'Cuenta con una ventana transparente para revisar cuando es necesario colocar un nuevo rollo.' }
-            ],
-            models: {
-                'black': {
-                    glb: './models/Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Negro - 0.001.glb',
-                    usdz: './models/Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Negro - 0.001.usdz',
-                    buyLink: 'https://www.bimobject.com/es/essity-eu/product/551108?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign',
-                    envSuffixPreview: 'Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Neg',
-                    envSuffixAR: 'Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne'
-                },
-                'white': {
-                    glb: './models/Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Blanco - 0.001.glb',
-                    usdz: './models/Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Blanco - 0.001.usdz',
-                    buyLink: 'https://www.bimobject.com/es/essity-na/product/5511202?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign',
-                    envSuffixPreview: 'Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Bla',
-                    envSuffixAR: 'Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla'
-                }
-            }
-        }
+    let productData = {};
+    let currentDesign = 'design-1';
+    let currentColor = null; // Variable persistente para el color
+    let currentEnvironment = null;
+    let productName = '';
+    let categoryName = '';
+
+    const colorTranslations = {
+        'black': 'Negro',
+        'white': 'Blanco',
+        'steel': 'Acero'
     };
 
-    let currentDesign = 'design-1';
-    let currentEnvironment = null;
+    async function loadProductData(productId) {
+        const manifestPath = `public/productos/${productId}.json`;
+        try {
+            // 0. Cargar el catálogo para obtener nombres descriptivos
+            const catalogRes = await fetch('public/catalog.json');
+            const catalog = await catalogRes.json();
+            catalog.categorias.forEach(cat => {
+                const p = cat.productos.find(prod => prod.id === productId);
+                if (p) {
+                    productName = p.nombre;
+                    categoryName = cat.nombre;
+                }
+            });
+
+            // 1. Leer manifest del producto
+            const manifestRes = await fetch(manifestPath);
+            if (!manifestRes.ok) throw new Error(`HTTP ${manifestRes.status} al cargar ${manifestPath}`);
+            const manifest = await manifestRes.json();
+
+            // 2. Fetchear todos los designs en paralelo
+            const designEntries = Object.entries(manifest.designs || {});
+            const fetchedDesigns = await Promise.all(
+                designEntries.map(async ([designId, designPath]) => {
+                    const res = await fetch(designPath);
+                    if (!res.ok) throw new Error(`HTTP ${res.status} al cargar ${designPath}`);
+                    const design = await res.json();
+                    return [designId, design];
+                })
+            );
+
+            // 3. Normalizar al formato interno que usa updateUI
+            productData = {};
+            for (const [designId, design] of fetchedDesigns) {
+                productData[designId] = {
+                    id: designId,
+                    description: design.descripcion,
+                    traffic: design.trafico,
+                    buyLink: design.buyLink,
+                    dimensions: {
+                        height: design.dimensiones?.alto || '---',
+                        width: design.dimensiones?.ancho || '---',
+                        depth: design.dimensiones?.prof || '---'
+                    },
+                    thumbnail: design.thumbnail || '', // Agregaremos este campo al JSON
+                    tutorialUrl: design.tutorialUrl || 'https://www.youtube.com/embed/3J1tc1fT32w',
+                    pages: (design.paginas || []).map(p => ({ title: p.titulo, content: p.contenido })),
+                    models: design.modelos || {},
+                    arPlacement: design.arPlacement || 'wall'
+                };
+            }
+            renderDesignOptions();
+            updateUI();
+        } catch (e) {
+            console.error('Error cargando datos de producto:', e);
+        }
+    }
+
+    // Obtener el ID del producto desde los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id') || 'tork-matic-dispensador-rollo';
+    loadProductData(productId);
+
+    // Configurar el botón Volver
+    document.querySelector('.back-button')?.addEventListener('click', () => {
+        window.history.back();
+    });
 
     // --- PATH GENERATION HELPER (Future-Proofed) ---
     function getModelPaths(type, design, color, env) {
@@ -259,32 +203,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const designData = productData[design];
         const colorData = (designData && designData.models[color]) ? designData.models[color] : null;
 
-        if (env && colorData) {
-            // Mapping from color IDs to your known folder names
-            const colorToFolder = {
-                'steel': 'acero',
-                'black': 'negro',
-                'white': 'blanco'
-            };
-            const folderColor = colorToFolder[color] || color;
+        if (env && colorData && colorData.entornos && colorData.entornos[env]) {
+            const envConfig = colorData.entornos[env];
+            const config = (type === 'ar') ? envConfig.ar : envConfig.preview;
 
-            const envToFilename = {
-                'fondo1': 'madera',
-                'fondo2': 'marmol',
-                'fondo3': 'ladrillo'
-            };
-            const envName = envToFilename[env];
-            const prefix = (type === 'preview') ? 'previo' : 'pared';
-
-            // Use specific environment suffixes defined for each product
-            const finalSuffix = (type === 'preview')
-                ? colorData.envSuffixPreview
-                : colorData.envSuffixAR;
-
-            return {
-                glb: `./models/Entornos/${design}/${folderColor}/${prefix}-${envName}-${finalSuffix}.glb`,
-                usdz: `./models/Entornos/${design}/${folderColor}/${prefix}-${envName}-${finalSuffix}.usdz`
-            };
+            if (config) {
+                return {
+                    glb: config.glb || "",
+                    usdz: config.usdz || ""
+                };
+            }
         } else if (colorData) {
             // Product-only models (not in an environment)
             return {
@@ -295,41 +223,69 @@ document.addEventListener('DOMContentLoaded', () => {
         return { glb: "", usdz: "" };
     }
 
+    function renderDesignOptions() {
+        const designContainer = document.getElementById('design-thumbnails-container');
+        if (!designContainer) return;
+
+        designContainer.innerHTML = '';
+        Object.values(productData).forEach(design => {
+            const btn = document.createElement('button');
+            btn.className = `thumb-btn ${design.id === currentDesign ? 'active' : ''}`;
+            btn.dataset.id = design.id;
+            btn.innerHTML = `
+                <div class="mock-thumb flex-center">
+                    <img src="${design.thumbnail || 'public/assets/images/placeholder.jpg'}" alt="${design.id}">
+                </div>
+            `;
+            btn.onclick = () => {
+                currentDesign = design.id;
+                document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                updateUI();
+            };
+            designContainer.appendChild(btn);
+        });
+    }
+
     function updateUI() {
         const data = productData[currentDesign];
-
         if (!data) return;
 
-        // Determine which color to show
+        // Actualizar Títulos
+        if (navTitle && categoryName) navTitle.textContent = categoryName;
+        if (productTitle && productName) productTitle.innerHTML = productName;
+
+        // Determinar colores disponibles
         const availableColors = Object.keys(data.models);
-        let activeColor;
 
-        // Manage color buttons visibility
-        colorBtns.forEach(btn => {
-            const btnColor = btn.getAttribute('data-color');
-            if (data.models[btnColor]) {
-                btn.style.display = 'flex';
-            } else {
-                btn.style.display = 'none';
-            }
-        });
+        // Si el color actual no existe en este diseño o es nulo, elegir el primero
+        if (!currentColor || !data.models[currentColor]) {
+            currentColor = availableColors[0];
+        }
 
-        // Get active color from buttons
-        let activeColorBtn = document.querySelector('.color-btn.active');
-
-        // If the current active color is not available for this design, find the first available
-        if (!activeColorBtn || !data.models[activeColorBtn.getAttribute('data-color')]) {
-            activeColor = availableColors[0];
-            // Update buttons to reflect new active state
-            colorBtns.forEach(btn => {
-                btn.classList.toggle('active', btn.getAttribute('data-color') === activeColor);
+        // Renderizar Colores dinámicamente
+        const colorContainer = document.getElementById('color-options-container');
+        if (colorContainer) {
+            colorContainer.innerHTML = '';
+            availableColors.forEach(colorId => {
+                const btn = document.createElement('button');
+                btn.className = `color-btn ${colorId === currentColor ? 'active' : ''}`;
+                btn.dataset.color = colorId;
+                const translatedName = colorTranslations[colorId] || (colorId.charAt(0).toUpperCase() + colorId.slice(1));
+                btn.innerHTML = `
+                    <span class="color-circle ${colorId}-color"></span>
+                    <span class="color-label">${translatedName}</span>
+                `;
+                btn.onclick = () => {
+                    currentColor = colorId;
+                    updateUI();
+                };
+                colorContainer.appendChild(btn);
             });
-        } else {
-            activeColor = activeColorBtn.getAttribute('data-color');
         }
 
         // Elements to animate
-        const elementsToAnimate = [productDesc, trafficLabel];
+        const elementsToAnimate = [productDesc, trafficLabel, productTitle];
 
         // Apply animation class
         elementsToAnimate.forEach(el => {
@@ -345,14 +301,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (trafficLabel) trafficLabel.innerHTML = data.traffic;
 
         // --- Model Path Logic ---
-        const paths = getModelPaths('preview', currentDesign, activeColor, currentEnvironment);
+        const paths = getModelPaths('preview', currentDesign, currentColor, currentEnvironment);
 
         // Update 3D Viewer
         if (productViewer && paths.glb) {
             // Only update and show loader if the source is actually different
             const currentSrc = productViewer.getAttribute('src');
             const newSrc = paths.glb.startsWith('./') ? paths.glb.substring(2) : paths.glb; // Normalize path for comparison if needed
-            
+
             // Check if it's already the same src to avoid unnecessary flickering
             if (!productViewer.src.includes(newSrc)) {
                 const mainLoader = document.getElementById('main-loader');
@@ -361,6 +317,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             productViewer.src = paths.glb;
             if (paths.usdz) productViewer.setAttribute('ios-src', paths.usdz);
+            
+            // Set AR Placement
+            const placement = data.arPlacement || 'wall';
+            productViewer.setAttribute('ar-placement', placement);
         }
     }
 
@@ -523,7 +483,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (btnDetalles) {
         btnDetalles.addEventListener('click', () => {
-            playClick();
             setupDetails();
             detailsOverlay.classList.remove('hidden');
             // toggleMainUI(false); // Removed to keep background UI visible
@@ -532,7 +491,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (detailsClose) {
         detailsClose.addEventListener('click', () => {
-            playClick();
             detailsOverlay.classList.add('hidden');
             // toggleMainUI(true); // Removed to keep background UI visible
         });
@@ -540,7 +498,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (btnTutorial) {
         btnTutorial.addEventListener('click', () => {
-            playClick();
+            const data = productData[currentDesign];
+            if (data && data.tutorialUrl) {
+                const iframe = tutorialOverlay.querySelector('iframe');
+                if (iframe) iframe.src = data.tutorialUrl;
+            }
             tutorialOverlay.classList.remove('hidden');
         });
     }
@@ -609,7 +571,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (btnMedidas && productViewer) {
         btnMedidas.addEventListener('click', () => {
-            playClick();
             const dimItems = [
                 ...productViewer.querySelectorAll('.dim'),
                 ...productViewer.querySelectorAll('.dot'),
@@ -671,33 +632,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial load
     updateUI();
 
-    colorBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            colorBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            updateUI();
-        });
-    });
-
-    thumbBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            thumbBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const designId = btn.getAttribute('data-id');
-            if (designId) {
-                currentDesign = designId;
-                updateUI();
-            }
-        });
-    });
-
     // Environment Change Logic
     const envBtns = document.querySelectorAll('.fab-env-thumb');
 
     envBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            playClick();
             // Update active state for buttons
             envBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
@@ -827,7 +766,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (onboardingOverlay) {
+    const onboardingShown = localStorage.getItem('onboardingShown');
+
+    if (onboardingOverlay && !onboardingShown) {
         setTimeout(() => {
             onboardingOverlay.classList.remove('hidden');
             updateOnboarding();
@@ -837,7 +778,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (onboardingNext) {
         onboardingNext.addEventListener('click', () => {
-            playClick();
             onboardingCard.style.opacity = '0';
             setTimeout(() => {
                 currentOnboardingStep++;
@@ -852,7 +792,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (onboardingSkip) {
         onboardingSkip.addEventListener('click', () => {
-            playClick();
             closeOnboarding();
         });
     }

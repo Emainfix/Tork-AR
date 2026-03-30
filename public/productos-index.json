@@ -1,0 +1,148 @@
+{
+  "productos": [
+    {
+      "id": "tork-matic-dispensador-rollo",
+      "nombre": "Tork Matic® Dispensador Toalla en Rollo",
+      "categoria": "dispensadores-toalla",
+      "archivo": "public/productos/tork-matic-dispensador-rollo.json",
+      "thumbnail": "assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Negro.jpg",
+      "designs": ["design-1", "design-2", "design-3", "design-4"]
+    },
+    {
+      "id": "tork-xpressnap-cafe",
+      "nombre": "Tork Xpressnap® Dispensador Café",
+      "categoria": "dispensadores-servilleta",
+      "archivo": "public/productos/tork-xpressnap-cafe.json",
+      "thumbnail": "assets/images/Tork_Xpressnap_Cafe_Negro.jpg",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-xpressnap-stand",
+      "nombre": "Tork Xpressnap® Dispensador Stand",
+      "categoria": "dispensadores-servilleta",
+      "archivo": "public/productos/tork-xpressnap-stand.json",
+      "thumbnail": "assets/images/Tork_Xpressnap_Stand_Negro.jpg",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-xpressnap-tabletop",
+      "nombre": "Tork Xpressnap® Dispensador TableTop",
+      "categoria": "dispensadores-servilleta",
+      "archivo": "public/productos/tork-xpressnap-tabletop.json",
+      "thumbnail": "assets/images/Tork_Xpressnap_Tabletop_Negro.jpg",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-xpressnap-fit",
+      "nombre": "Tork Xpressnap® Dispensador Fit™",
+      "categoria": "dispensadores-servilleta",
+      "archivo": "public/productos/tork-xpressnap-fit.json",
+      "thumbnail": "assets/images/Tork_Dispensador_Servilleta_Xpressnap_Fit___Negro.jpg",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-xpressnap-counter-top",
+      "nombre": "Tork Xpressnap® Dispensador Counter top",
+      "categoria": "dispensadores-servilleta",
+      "archivo": "public/productos/tork-xpressnap-counter-top.json",
+      "thumbnail": "assets/images/Tork_Xpressnap_Countertop_Negro.jpg",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-peakserve-continua",
+      "nombre": "Tork PeakServe® Dispensador Toalla Continua",
+      "categoria": "dispensadores-toalla",
+      "archivo": "public/productos/tork-peakserve-continua.json",
+      "thumbnail": "assets/images/Tork_Peakserve_Dispensador_Toalla_Continua/Tork_Peakserve_Dispensador_Toalla_Continua_Maxi_Negro.jpg",
+      "designs": ["design-1", "design-2"]
+    },
+    {
+      "id": "tork-higienico-bobina",
+      "nombre": "Tork Dispensador Higienico en Bobina",
+      "categoria": "dispensadores-higienico",
+      "archivo": "public/productos/tork-higienico-bobina.json",
+      "thumbnail": "assets/images/productos/higienico_bobina.jpg",
+      "designs": ["design-1", "design-2", "design-3"]
+    },
+    {
+      "id": "tork-smartone",
+      "nombre": "Dispensador Tork SmartOne",
+      "categoria": "dispensadores-higienico",
+      "archivo": "public/productos/tork-smartone.json",
+      "thumbnail": "assets/images/productos/smartone.jpg",
+      "designs": ["design-1", "design-2", "design-3"]
+    },
+    {
+      "id": "tork-jabon-espuma",
+      "nombre": "Tork Dispensador Jabón en Espuma",
+      "categoria": "dispensadores-jabon",
+      "archivo": "public/productos/tork-jabon-espuma.json",
+      "thumbnail": "assets/images/productos/jabon_espuma.jpg",
+      "designs": ["design-1", "design-2", "design-3", "design-4"]
+    },
+    {
+      "id": "tork-jabon-manual",
+      "nombre": "Tork Dispensador Manual Jabón Spray, Liquido y Gel",
+      "categoria": "dispensadores-jabon",
+      "archivo": "public/productos/tork-jabon-manual.json",
+      "thumbnail": "assets/images/productos/jabon_manual.jpg",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-panos-rollo",
+      "nombre": "Tork Dispensador Paños en Rollo",
+      "categoria": "dispensadores-panos",
+      "archivo": "public/productos/tork-panos-rollo.json",
+      "thumbnail": "assets/images/productos/panos_rollo.jpg",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-top-pak",
+      "nombre": "Tork Dispensador para Paños Top Pak",
+      "categoria": "dispensadores-panos",
+      "archivo": "public/productos/tork-top-pak.json",
+      "thumbnail": "assets/images/productos/top_pak.jpg",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-xpress-interdoblada",
+      "nombre": "Tork Xpress® Dispensador Toalla Interdoblada",
+      "categoria": "dispensadores-toalla",
+      "archivo": "public/productos/tork-xpress-interdoblada.json",
+      "thumbnail": "assets/images/Tork Xpress_Dispensador_Toalla_Interdoblada/Tork Xpress_Dispensador_Toalla_Interdoblada_Acero_Inoxidable.jpg",
+      "designs": ["design-1", "design-2", "design-3"]
+    },
+    {
+      "id": "tork-xpress-interdoblada-countertop",
+      "nombre": "Tork Xpress® Dispensador Toalla Interdoblada Countertop",
+      "categoria": "dispensadores-toalla",
+      "archivo": "public/productos/tork-xpress-interdoblada-countertop.json",
+      "thumbnail": "assets/images/Tork Xpress_Dispensador_Toalla_Interdoblada_Countertop/Tork Xpress_Dispensador_Toalla_Interdoblada_Countertop_Negro.jpg",
+      "designs": ["design-1", "design-2"]
+    },
+    {
+      "id": "tork-washstation-rollo",
+      "nombre": "Tork Washstation Dispensador Toalla de Manos en Rollo",
+      "categoria": "dispensadores-toalla",
+      "archivo": "public/productos/tork-washstation-rollo.json",
+      "thumbnail": "assets/images/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo/Miniaturas.jpg",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-fluido-centrico",
+      "nombre": "Tork Dispensador Toalla para Manos Fluido Céntrico",
+      "categoria": "dispensadores-toalla",
+      "archivo": "public/productos/tork-fluido-centrico.json",
+      "thumbnail": "assets/images/productos/fluido_centrico.png",
+      "designs": ["design-1"]
+    },
+    {
+      "id": "tork-reflex",
+      "nombre": "Tork Reflex™",
+      "categoria": "dispensadores-toalla",
+      "archivo": "public/productos/tork-reflex.json",
+      "thumbnail": "assets/images/productos/reflex.png",
+      "designs": ["design-1", "design-2"]
+    }
+  ]
+}

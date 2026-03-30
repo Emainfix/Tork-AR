@@ -1,0 +1,46 @@
+{
+  "id": "design-3",
+  "productoId": "tork-xpress-interdoblada",
+  "nombre": "Tork Xpress® Dispensador Toalla Interdoblada Acero Inoxidable",
+  "descripcion": "Acabado premium de acero inoxidable que aporta elegancia a cualquier baño.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Tork Xpress_Dispensador_Toalla_Interdoblada/Tork Xpress_Dispensador_Toalla_Interdoblada_Acero_Inoxidable.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "46.8 cm", "ancho": "31.7 cm", "prof": "10.1 cm" },
+  "paginas": [
+    {
+       "titulo": "Imagen Premium",
+       "contenido": "Cuerpo de acero inoxidable que combina elegancia y resistencia extrema."
+    },
+    {
+       "titulo": "Protección Image Design",
+       "contenido": "Acabado que repele las huellas dactilares para que el dispensador luzca siempre impecable."
+    },
+    {
+       "titulo": "Diseño Extra Plano",
+       "contenido": "Su diseño delgado ahorra un espacio valioso sin comprometer la capacidad."
+    }
+  ],
+  "modelos": {
+    "steel": {
+      "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "entornos": {
+        "fondo1": {
+          "preview": { "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.usdz" },
+          "ar": { "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.usdz" }
+        },
+        "fondo2": {
+          "preview": { "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.usdz" },
+          "ar": { "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.usdz" }
+        },
+        "fondo3": {
+          "preview": { "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.usdz" },
+          "ar": { "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Acero_Inoxidable - 0.001.usdz" }
+        }
+      }
+    }
+  }
+}

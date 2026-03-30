@@ -13,6 +13,10 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: var(--font-stack);
     background-color: #f5f5f5; /* Light background for the outer area if viewed on desktop */
@@ -48,7 +52,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid #f0f0f0;
 }
 
 .logo-text {
@@ -92,13 +95,16 @@ body {
     color: var(--white);
     font-size: 22px;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--white);
-    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.back-button .fab-icon-img {
+    width: 35px;
+    height: 35px;
 }
 
 .nav-title {
@@ -106,7 +112,7 @@ body {
     text-align: center;
     font-size: 18px;
     font-weight: 500;
-    transform: translateX(-15px); /* Offset to perfectly center considering the back button */
+    transform: translateX(-17.5px); /* Ajustado para el nuevo tamaño del icono de 35px */
 }
 
 /* Main Content */
@@ -655,7 +661,8 @@ button[slot="hotspot-depth"]::after {
 }
 
 /* Action Buttons */
-.action-buttons {
+.action-buttons,
+.category-buttons {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -674,6 +681,7 @@ button[slot="hotspot-depth"]::after {
     justify-content: center;
     gap: 12px;
     transition: background-color 0.2s, transform 0.1s;
+    text-decoration: none;
 }
 
 .btn:active {
@@ -883,18 +891,12 @@ button[slot="hotspot-depth"]::after {
         max-width: 400px; /* Limit button width on desktop */
     }
 
-    .btn {
-        width: 100%;
-        padding: 16px 30px;
-        font-size: 20px;
-    }
-    
     .nav-title {
         font-size: 22px;
     }
     
     .logo-image {
-        height: 50px;
+        height: 35px;
     }
 }
 
@@ -1287,18 +1289,23 @@ button[slot="hotspot-depth"]::after {
 
 .onboarding-skip {
     position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.15);
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
     padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 13px;
+    font-weight: 500;
     z-index: 10006;
+    transition: background 0.2s;
+}
+
+.onboarding-skip:hover {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .onboarding-highlighted {

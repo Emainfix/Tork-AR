@@ -1,0 +1,100 @@
+{
+  "id": "design-1",
+  "productoId": "tork-peakserve-continua",
+  "descripcion": "Diseño innovador de alta capacidad que maximiza el tiempo de recarga.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Tork_Peakserve_Dispensador_Toalla_Continua/Tork_Peakserve_Dispensador_Toalla_Continua_Maxi_Negro.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-na/product/552520?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "73 cm", "ancho": "37 cm", "prof": "10.5 cm" },
+  "paginas": [
+    {
+      "titulo": "Peakserve 1",
+      "contenido": "Máxima capacidad, hasta 2.100 toallas."
+    },
+    {
+      "titulo": "Peakserve 2",
+      "contenido": "Mantiene el flujo de personas."
+    },
+    {
+      "titulo": "Peakserve 3",
+      "contenido": "Reduce el desperdicio con el dispensado uno a la vez."
+    }
+  ],
+  "modelos": {
+    "black": {
+      "glb": "public/assets/modelos/ToallasParaManos/TorkPeakserveDispensadorDeToallaContinua/Tork_Peakserve_Dispensador_de_Toalla_Continua___Maxi_Negro - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/TorkPeakserveDispensadorDeToallaContinua/Tork_Peakserve_Dispensador_de_Toalla_Continua___Maxi_Negro - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/552508?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Negro.usdz"
+          }
+        }
+      }
+    },
+    "white": {
+      "glb": "public/assets/modelos/ToallasParaManos/TorkPeakserveDispensadorDeToallaContinua/Tork_Peakserve_Dispensador_de_Toalla_Continua___Maxi_Blanco - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/TorkPeakserveDispensadorDeToallaContinua/Tork_Peakserve_Dispensador_de_Toalla_Continua___Maxi_Blanco - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-na/product/552520?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-1/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.glb",
+            "usdz": "public/assets/fondos/Entornos/design-1/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Blanco.usdz"
+          }
+        }
+      }
+    }
+  }
+}

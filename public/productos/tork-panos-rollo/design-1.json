@@ -1,0 +1,65 @@
+{
+  "id": "design-1",
+  "productoId": "tork-panos-rollo",
+  "arPlacement": "floor",
+  "nombre": "Tork Dispensador Paños en Rollo",
+  "descripcion": "Dispensador de gran capacidad para paños de limpieza en rollo, diseñado para entornos industriales y de servicio.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Paños de limpieza/Tork_Dispensador_Panos_en_Rollo/Tork_Dispensador_Panos_en_Rollo.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "44.7 cm", "ancho": "42.7 cm", "prof": "39.2 cm" },
+  "paginas": [
+    {
+      "titulo": "Eficiencia",
+      "contenido": "Dispensación rápida y fácil para tareas de limpieza intensiva."
+    },
+    {
+      "titulo": "Robustez",
+      "contenido": "Construido para durar en los entornos de trabajo más exigentes."
+    },
+    {
+      "titulo": "Versatilidad",
+      "contenido": "Compatible con una amplia gama de paños de limpieza Tork."
+    }
+  ],
+  "modelos": {
+    "white": {
+      "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.glb",
+      "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.glb",
+            "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.glb",
+            "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.glb",
+            "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.glb",
+            "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.glb",
+            "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.glb",
+            "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.usdz"
+          }
+        }
+      }
+    }
+  }
+}

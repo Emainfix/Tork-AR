@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tork - Categorías</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <img src="public/assets/logos/logo.png" alt="Logo de Tork" class="logo-image">
+        </header>
+        <nav class="top-nav">
+            <a href="index.html" class="back-button">
+                <img src="public/assets/icon/boton regresar blanco.svg" alt="Regresar" class="fab-icon-img">
+            </a>
+            <h1 class="nav-title">Categorías</h1>
+        </nav>
+        <main class="content">
+            <div id="categories-grid" class="category-buttons">
+                <!-- Contenido generado por JS -->
+            </div>
+        </main>
+        <footer class="main-footer">
+            <img src="public/assets/logos/logo-essity.png" alt="Logo de Essity" class="essity-logo-image">
+        </footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script>
+        fetch('public/catalog.json')
+            .then(res => res.json())
+            .then(data => {
+                const grid = document.getElementById('categories-grid');
+                data.categorias.forEach(cat => {
+                    const card = document.createElement('a');
+                    card.href = `productos.html?cat=${cat.id}`;
+                    card.className = "btn btn-outline";
+                    card.innerHTML = `
+                        <img src="${cat.thumbnail || 'public/assets/images/placeholder.jpg'}" class="fab-icon-img" style="border-radius: 4px;" onerror="this.src='public/assets/images/placeholder.jpg'">
+                        <span>${cat.nombre}</span>
+                    `;
+                    grid.appendChild(card);
+                });
+            });
+    </script>
+</body>
+</html>

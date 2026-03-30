@@ -1,0 +1,100 @@
+{
+  "id": "design-4",
+  "productoId": "tork-matic-dispensador-rollo",
+  "descripcion": "Con sensor Intuition™ Dispensación sin contacto, una hoja a la vez.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Sensor_Intuition_Negro.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/551100?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "36.8 cm", "ancho": "33.1 cm", "prof": "20.6 cm" },
+  "paginas": [
+    {
+      "titulo": "Matic 1",
+      "contenido": "Cuenta con un compartimento interior para colocar el remanente del rollo y consumirlo al 100%."
+    },
+    {
+      "titulo": "Matic 2",
+      "contenido": "Ofrece una dispensación de una hoja a la vez para mejorar la higiene y reducir el consumo."
+    },
+    {
+      "titulo": "Matic 3",
+      "contenido": "Cuenta con una ventana transparente para revisar cuando es necesario colocar un nuevo rollo."
+    }
+  ],
+  "modelos": {
+    "black": {
+      "glb": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Negro - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Negro - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/551108?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-4/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-4/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/negro/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-4/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-4/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/negro/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-4/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-4/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/negro/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In ne.usdz"
+          }
+        }
+      }
+    },
+    "white": {
+      "glb": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Blanco - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In Blanco - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-na/product/5511202?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-4/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-4/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/blanco/pared-madera-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-4/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-4/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/blanco/pared-marmol-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-4/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-4/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.glb",
+            "usdz": "public/assets/fondos/Entornos/design-4/blanco/pared-ladrillo-Tork Matic Dispensador Toalla de Manos en Rollo - Sensor In bla.usdz"
+          }
+        }
+      }
+    }
+  }
+}

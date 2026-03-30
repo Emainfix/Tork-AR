@@ -1,0 +1,129 @@
+{
+  "categorias": [
+    {
+      "id": "higienicos",
+      "nombre": "Higienicos",
+      "thumbnail": "public/assets/icon/uvrx8egtn8dq5a6hyryq.svg",
+      "productos": [
+        {
+          "id": "tork-higienico-bobina",
+          "nombre": "Tork Dispensador Higienico en Bobina",
+          "thumbnail": "public/assets/images/Higienicos/Tork_Dispensador_Higiénico_en_Bobina/Tork_Dispensador_Higiénico_en_Bobina_Negro.jpg"
+        },
+        {
+          "id": "tork-smartone",
+          "nombre": "Dispensador Tork SmartOne",
+          "thumbnail": "public/assets/images/Higienicos/Dispensadores_Tork_SmartOne/Dispensadores_Tork_SmartOne_Maxi_Negro.jpg"
+        }
+      ]
+    },
+    {
+      "id": "servilletas",
+      "nombre": "Servilletas",
+      "thumbnail": "public/assets/icon/kye4en6ykt6v8ta61wat.svg",
+      "productos": [
+        {
+          "id": "tork-xpressnap-cafe",
+          "nombre": "Tork Xpressnap® Dispensador Café",
+          "thumbnail": "public/assets/images/Servilletas/Tork_Xpressnap_Dispensador_Cafe/Tork_Xpressnap_Dispensador_Cafe.jpg"
+        },
+        {
+          "id": "tork-xpressnap-stand",
+          "nombre": "Tork Xpressnap® Dispensador Stand",
+          "thumbnail": "public/assets/images/Servilletas/Tork_Xpressnap_Dispensador_Stand/Tork_Xpressnap_Dispensador_Stand.jpg"
+        },
+        {
+          "id": "tork-xpressnap-tabletop",
+          "nombre": "Tork Xpressnap® Dispensador TableTop",
+          "thumbnail": "public/assets/images/Servilletas/Tork_Xpressnap_Dispensador_TableTop/Tork_Xpressnap_Dispensador_TableTop.jpg"
+        },
+        {
+          "id": "tork-xpressnap-fit",
+          "nombre": "Tork Xpressnap® Dispensador Fit™",
+          "thumbnail": "public/assets/images/Servilletas/Tork_Xpressnap_Dispensador_Fit/Tork_Xpressnap_Dispensador_Fit.jpg"
+        },
+        {
+          "id": "tork-xpressnap-counter-top",
+          "nombre": "Tork Xpressnap® Dispensador Counter top",
+          "thumbnail": "public/assets/images/Servilletas/Tork_Xpressnap_Dispensador_Counter_top/Tork_Xpressnap_Dispensador_Counter_top.jpg"
+        }
+      ]
+    },
+    {
+      "id": "toallas-manos",
+      "nombre": "Toallas para manos",
+      "thumbnail": "public/assets/icon/osjned1w0ecbtt6eqw0x.svg",
+      "productos": [
+        {
+          "id": "tork-matic-dispensador-rollo",
+          "nombre": "Tork Matic® Dispensador Toalla en Rollo",
+          "thumbnail": "public/assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Negro.jpg"
+        },
+        {
+          "id": "tork-xpress-interdoblada",
+          "nombre": "Tork Xpress® Dispensador Toalla Interdoblada",
+          "thumbnail": "public/assets/images/Tork Xpress_Dispensador_Toalla_Interdoblada/Tork Xpress_Dispensador_Toalla_Interdoblada_Acero_Inoxidable.jpg"
+        },
+        {
+          "id": "tork-xpress-interdoblada-countertop",
+          "nombre": "Tork Xpress® Dispensador Toalla Interdoblada Countertop",
+          "thumbnail": "public/assets/images/Tork Xpress_Dispensador_Toalla_Interdoblada_Countertop/Tork Xpress_Dispensador_Toalla_Interdoblada_Countertop_Negro.jpg"
+        },
+        {
+          "id": "tork-peakserve-continua",
+          "nombre": "Tork PeakServe® Dispensador Toalla Continua",
+          "thumbnail": "public/assets/images/Tork_Peakserve_Dispensador_Toalla_Continua/Tork_Peakserve_Dispensador_Toalla_Continua_Maxi_Negro.jpg"
+        },
+        {
+          "id": "tork-washstation-rollo",
+          "nombre": "Tork Washstation Dispensador Toalla de Manos en Rollo",
+          "thumbnail": "public/assets/images/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo/Miniaturas.jpg"
+        },
+        {
+          "id": "tork-fluido-centrico",
+          "nombre": "Tork Dispensador Toalla para Manos Fluido Céntrico",
+          "thumbnail": "public/assets/images/productos/fluido_centrico.png"
+        },
+        {
+          "id": "tork-reflex",
+          "nombre": "Tork Reflex™",
+          "thumbnail": "public/assets/images/productos/reflex.png"
+        }
+      ]
+    },
+    {
+      "id": "jabones-tork",
+      "nombre": "Jabones Tork",
+      "thumbnail": "public/assets/icon/lqxapyvh72ht42prjbqw.svg",
+      "productos": [
+        {
+          "id": "tork-jabon-espuma",
+          "nombre": "Tork Dispensador Jabón en Espuma",
+          "thumbnail": "public/assets/images/Jabones/Tork_Dispensador_Jabon_en_Espuma/Tork_Dispensador_Jabon_en_Espuma_Manual_Acero_Inoxidable.jpg"
+        },
+        {
+          "id": "tork-jabon-manual",
+          "nombre": "Tork Dispensador Manual Jabón Spray, Liquido y Gel",
+          "thumbnail": "public/assets/images/Jabones/Tork_Dispensador_Manual_Jabon_Spray_liquido_y_gel/Tork_Dispensador_Manual_Jabon_Spray_liquido_y_gel_Negro.jpg"
+        }
+      ]
+    },
+    {
+      "id": "panos-limpieza",
+      "nombre": "Paños de limpieza",
+      "thumbnail": "public/assets/icon/kye4en6ykt6v8ta61wat.svg",
+      "productos": [
+        {
+          "id": "tork-panos-rollo",
+          "nombre": "Tork Dispensador Paños en Rollo",
+          "thumbnail": "public/assets/images/Paños de limpieza/Tork_Dispensador_Panos_en_Rollo/Tork_Dispensador_Panos_en_Rollo.jpg"
+        },
+        {
+          "id": "tork-top-pak",
+          "nombre": "Tork Dispensador para Paños Top Pak",
+          "thumbnail": "public/assets/images/Paños de limpieza/Tork_Dispensador_para_Panos_Top_Pak/Tork_Dispensador_para_Panos_Top_Pak.jpg"
+        }
+      ]
+    }
+  ]
+}

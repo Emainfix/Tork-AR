@@ -1,0 +1,101 @@
+{
+  "id": "design-2",
+  "productoId": "tork-jabon-espuma",
+  "nombre": "Dispensador Sensor Intuition™ Jabón en Espuma",
+  "descripcion": "Dispensador sin contacto con sensor Intuition™ que ofrece una mejor higiene.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Jabones/Tork_Dispensador_Jabon_en_Espuma/Tork_Dispensador_Jabon_en_Espuma_Sensor_Intuitio_ Acero_Negro.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "27.8 cm", "ancho": "11.3 cm", "prof": "13.0 cm" },
+  "paginas": [
+    {
+      "titulo": "Sin contacto",
+      "contenido": "Ideal para entornos que requieren los más altos estándares de higiene."
+    },
+    {
+      "titulo": "Sensor Intuition™",
+      "contenido": "Dispensación automática que mejora el control de consumo y la higiene."
+    },
+    {
+      "titulo": "Alta Capacidad",
+      "contenido": "Diseñado para baños de mucho tráfico, reduciendo la frecuencia de recargas."
+    }
+  ],
+  "modelos": {
+    "black": {
+      "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.glb",
+      "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.usdz"
+          }
+        }
+      }
+    },
+    "white": {
+      "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.glb",
+      "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338270",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.usdz"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "design-1",
+  "productoId": "tork-washstation-rollo",
+  "nombre": "Tork Washstation Dispensador Toalla de Manos en Rollo",
+  "descripcion": "Dispensador especialmente diseñado para áreas de preparación de alimentos con alto grado de higiene.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo/Miniaturas.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "46.2 cm", "ancho": "33.5 cm", "prof": "23.9 cm" },
+  "paginas": [
+    {
+       "titulo": "Higiene Extrema",
+       "contenido": "Carcasa resistente al agua para poder lavarla directamente."
+    },
+    {
+       "titulo": "Eficiencia",
+       "contenido": "Dispensación de gran capacidad para minimizar el tiempo de inactividad."
+    },
+    {
+       "titulo": "Robustez",
+       "contenido": "Diseño duradero que soporta el uso industrial diario."
+    }
+  ],
+  "modelos": {
+    "standard": {
+      "glb": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "entornos": {
+        "fondo1": {
+          "preview": { "glb": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.usdz" },
+          "ar": { "glb": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.usdz" }
+        },
+        "fondo2": {
+          "preview": { "glb": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.usdz" },
+          "ar": { "glb": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.usdz" }
+        },
+        "fondo3": {
+          "preview": { "glb": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.usdz" },
+          "ar": { "glb": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.glb", "usdz": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.usdz" }
+        }
+      }
+    }
+  }
+}

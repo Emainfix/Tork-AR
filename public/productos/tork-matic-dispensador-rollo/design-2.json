@@ -1,0 +1,62 @@
+{
+  "id": "design-2",
+  "productoId": "tork-matic-dispensador-rollo",
+  "descripcion": "Diseño moderno de acero inoxidable con recubrimiento antihuellas.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Tork Matic® Dispensador Toalla en Rollo/Tork_Matic_Dispensador_Toalla_en_Rollo_Acero_Inoxidable.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/551002?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "37.3 cm", "ancho": "33.5 cm", "prof": "20.2 cm" },
+  "paginas": [
+    {
+      "titulo": "Matic 1",
+      "contenido": "Cuenta con un compartimento interior para colocar el remanente del rollo y consumirlo al 100%."
+    },
+    {
+      "titulo": "Matic 2",
+      "contenido": "Ofrece una dispensación de una hoja a la vez para mejorar la higiene y reducir el consumo."
+    },
+    {
+      "titulo": "Matic 3",
+      "contenido": "Cuenta con una ventana transparente para revisar cuando es necesario colocar un nuevo rollo."
+    }
+  ],
+  "modelos": {
+    "steel": {
+      "glb": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - AceroInoxidable - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/TorkMaticDispensadorToallaDeManos/Tork Matic Dispensador Toalla de Manos en Rollo - AceroInoxidable - 0.001.usdz",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-2/acero/pared-madera-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.glb",
+            "usdz": "public/assets/fondos/Entornos/design-2/acero/pared-madera-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-2/acero/pared-madera-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.glb",
+            "usdz": "public/assets/fondos/Entornos/design-2/acero/pared-madera-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-2/acero/pared-marmol-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.glb",
+            "usdz": "public/assets/fondos/Entornos/design-2/acero/pared-marmol-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-2/acero/pared-marmol-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.glb",
+            "usdz": "public/assets/fondos/Entornos/design-2/acero/pared-marmol-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/fondos/Entornos/design-2/acero/pared-ladrillo-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.glb",
+            "usdz": "public/assets/fondos/Entornos/design-2/acero/pared-ladrillo-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/fondos/Entornos/design-2/acero/pared-ladrillo-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.glb",
+            "usdz": "public/assets/fondos/Entornos/design-2/acero/pared-ladrillo-Tork_Matic_Dispensador_Toalla_de_Manos_en_Rollo - AceroInox.usdz"
+          }
+        }
+      }
+    }
+  }
+}

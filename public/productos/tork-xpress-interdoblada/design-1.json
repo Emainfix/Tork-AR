@@ -1,0 +1,101 @@
+{
+  "id": "design-1",
+  "productoId": "tork-xpress-interdoblada",
+  "nombre": "Tork Xpress® Dispensador Toalla Interdoblada Maxi",
+  "descripcion": "Dispensador de gran capacidad con diseño extra delgado.",
+  "trafico": "Tráfico: alto",
+  "thumbnail": "public/assets/images/Tork Xpress_Dispensador_Toalla_Interdoblada/Tork Xpress_Dispensador_Toalla_Interdoblada_Maxi_Elevation_Negro.jpg",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "dimensiones": { "alto": "44.4 cm", "ancho": "30.2 cm", "prof": "10.2 cm" },
+  "paginas": [
+    {
+      "titulo": "Ultra delgado",
+      "contenido": "Ideal para baños con espacio reducido pero alto tráfico."
+    },
+    {
+      "titulo": "Higiene",
+      "contenido": "Dispensación de hoja por hoja que garantiza que el usuario solo toque la toalla que utiliza."
+    },
+    {
+      "titulo": "Mantenimiento",
+      "contenido": "Fácil de rellenar gracias a su diseño funcional de apertura lateral."
+    }
+  ],
+  "modelos": {
+    "black": {
+      "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.usdz"
+          }
+        }
+      }
+    },
+    "white": {
+      "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.glb",
+      "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.usdz",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338270",
+      "entornos": {
+        "fondo1": {
+          "preview": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.usdz"
+          }
+        },
+        "fondo2": {
+          "preview": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.usdz"
+          }
+        },
+        "fondo3": {
+          "preview": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.glb",
+            "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.usdz"
+          }
+        }
+      }
+    }
+  }
+}
