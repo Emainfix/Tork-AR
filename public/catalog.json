@@ -82,12 +82,12 @@
         {
           "id": "tork-fluido-centrico",
           "nombre": "Tork Dispensador Toalla para Manos Fluido Céntrico",
-          "thumbnail": "public/assets/images/productos/fluido_centrico.png"
+          "thumbnail": "public\\assets\\images\\Tork_Dispensador_Toalla_para_Manos_Fluido_Centrico\\Tork_Dispensador_Toalla_para_Manos_Fluido_Centrico.jpg"
         },
         {
           "id": "tork-reflex",
           "nombre": "Tork Reflex™",
-          "thumbnail": "public/assets/images/productos/reflex.png"
+          "thumbnail": "public\\assets\\images\\Tork_Reflex\\Tork_Reflex_Maxi.jpg"
         }
       ]
     },

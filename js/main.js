@@ -1,6 +1,40 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+// --- LOGIC HELPERS (Exportables para testeo) ---
+export const colorTranslations = {
+    'black': 'Negro',
+    'white': 'Blanco',
+    'steel': 'Acero'
+};
+
+/**
+ * Genera las rutas de los modelos GLB/USDZ basados en la configuración
+ */
+export function getModelPaths(productData, type, design, color, env) {
+    const designData = productData[design];
+    const colorData = (designData && designData.models[color]) ? designData.models[color] : null;
+
+    if (env && colorData && colorData.entornos && colorData.entornos[env]) {
+        const envConfig = colorData.entornos[env];
+        const config = (type === 'ar') ? envConfig.ar : envConfig.preview;
+
+        if (config) {
+            return {
+                glb: config.glb || "",
+                usdz: config.usdz || ""
+            };
+        }
+    } else if (colorData) {
+        return {
+            glb: colorData.glb,
+            usdz: colorData.usdz
+        };
+    }
+    return { glb: "", usdz: "" };
+}
+
+// --- DOM EVENT HANDLER ---
 document.addEventListener('DOMContentLoaded', () => {
     // Detectar si es escritorio (PC o Mac)
     const isDesktop = !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
@@ -124,12 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let productName = '';
     let categoryName = '';
 
-    const colorTranslations = {
-        'black': 'Negro',
-        'white': 'Blanco',
-        'steel': 'Acero'
-    };
-
     async function loadProductData(productId) {
         const manifestPath = `public/productos/${productId}.json`;
         try {
@@ -196,32 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.back-button')?.addEventListener('click', () => {
         window.history.back();
     });
-
-    // --- PATH GENERATION HELPER (Future-Proofed) ---
-    function getModelPaths(type, design, color, env) {
-        // Product data for current design and color
-        const designData = productData[design];
-        const colorData = (designData && designData.models[color]) ? designData.models[color] : null;
-
-        if (env && colorData && colorData.entornos && colorData.entornos[env]) {
-            const envConfig = colorData.entornos[env];
-            const config = (type === 'ar') ? envConfig.ar : envConfig.preview;
-
-            if (config) {
-                return {
-                    glb: config.glb || "",
-                    usdz: config.usdz || ""
-                };
-            }
-        } else if (colorData) {
-            // Product-only models (not in an environment)
-            return {
-                glb: colorData.glb,
-                usdz: colorData.usdz
-            };
-        }
-        return { glb: "", usdz: "" };
-    }
 
     function renderDesignOptions() {
         const designContainer = document.getElementById('design-thumbnails-container');
@@ -301,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (trafficLabel) trafficLabel.innerHTML = data.traffic;
 
         // --- Model Path Logic ---
-        const paths = getModelPaths('preview', currentDesign, currentColor, currentEnvironment);
+        const paths = getModelPaths(productData, 'preview', currentDesign, currentColor, currentEnvironment);
 
         // Update 3D Viewer
         if (productViewer && paths.glb) {
@@ -317,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             productViewer.src = paths.glb;
             if (paths.usdz) productViewer.setAttribute('ios-src', paths.usdz);
-            
+
             // Set AR Placement
             const placement = data.arPlacement || 'wall';
             productViewer.setAttribute('ar-placement', placement);
@@ -538,7 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const activeColor = activeColorBtn ? activeColorBtn.getAttribute('data-color') : 'black';
 
             // Use helper to get AR-specific paths
-            const paths = getModelPaths('ar', currentDesign, activeColor, currentEnvironment);
+            const paths = getModelPaths(productData, 'ar', currentDesign, activeColor, currentEnvironment);
 
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 

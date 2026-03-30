@@ -24,7 +24,7 @@
     }
   ],
   "modelos": {
-    "white": {
+    "normal": {
       "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.glb",
       "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.usdz",
       "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
