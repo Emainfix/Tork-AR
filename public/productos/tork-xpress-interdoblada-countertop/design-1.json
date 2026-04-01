@@ -3,10 +3,10 @@
   "productoId": "tork-xpress-interdoblada-countertop",
   "arPlacement": "floor",
   "nombre": "Tork Xpress® Dispensador Toalla Interdoblada Countertop",
-  "descripcion": "Dispensador de mostrador para un acceso rápido y sencillo a las toallas de manos.",
-  "trafico": "Tráfico: bajo/medio",
+  "descripcion": "Sistema de toalla interdoblada versátil, no requiere instalación en la pared.",
+  "trafico": "Tráfico: bajo - medio",
   "thumbnail": "public/assets/images/Tork Xpress_Dispensador_Toalla_Interdoblada_Countertop/Tork Xpress_Dispensador_Toalla_Interdoblada_Countertop_Negro.jpg",
-  "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/552208",
   "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
   "dimensiones": { "alto": "20.1 cm", "ancho": "32.2 cm", "prof": "11.6 cm" },
   "paginas": [
@@ -27,7 +27,7 @@
     "black": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada Conuntertop/Tork Xpress Dispensador Toalla Interdoblada Conuntertop - Negro - 0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada Conuntertop/Tork Xpress Dispensador Toalla Interdoblada Conuntertop - Negro - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/552208",
       "entornos": {
         "fondo1": {
           "preview": {
@@ -64,7 +64,7 @@
     "white": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada Conuntertop/Tork Xpress Dispensador Toalla Interdoblada Conuntertop - Blanco - 0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada Conuntertop/Tork Xpress Dispensador Toalla Interdoblada Conuntertop - Blanco - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338270",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/552200",
       "entornos": {
         "fondo1": {
           "preview": {

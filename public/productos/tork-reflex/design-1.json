@@ -2,7 +2,7 @@
   "id": "design-1",
   "productoId": "tork-reflex",
   "nombre": "Tork Reflex™ Maxi",
-  "descripcion": "Dispensador de alimentación central que reduce el consumo y mejora la higiene.",
+  "descripcion": "Toalla de fluido céntrico cuenta con una boquilla que gira para que puedas tomar la toalla con una sola mano.",
   "trafico": "Tráfico: alto",
   "thumbnail": "public\\assets\\images\\Tork_Reflex\\Tork_Reflex_Maxi.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/473180",
@@ -26,7 +26,7 @@
     "normal": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Reflex/Tork_Reflex___Maxi - 0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Reflex/Tork_Reflex___Maxi - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/473180",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/473190",
       "entornos": {
         "fondo1": {
           "preview": {

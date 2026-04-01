@@ -2,8 +2,8 @@
   "id": "design-2",
   "productoId": "tork-jabon-espuma",
   "nombre": "Dispensador Sensor Intuition™ Jabón en Espuma",
-  "descripcion": "Dispensador sin contacto con sensor Intuition™ que ofrece una mejor higiene.",
-  "trafico": "Tráfico: alto",
+  "descripcion": "Recambio sin esfuerzo en menos de 10 segundos. Para todo tipo de baños.",
+  "trafico": "Tráfico: bajo - medio - alto",
   "thumbnail": "public/assets/images/Jabones/Tork_Dispensador_Jabon_en_Espuma/Tork_Dispensador_Jabon_en_Espuma_Sensor_Intuitio_ Acero_Negro.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
   "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
@@ -26,7 +26,7 @@
     "black": {
       "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.glb",
       "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_Negro 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/561608",
       "entornos": {
         "fondo1": {
           "preview": {
@@ -63,7 +63,7 @@
     "white": {
       "glb": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.glb",
       "usdz": "public/assets/modelos/Jabones Tork/Tork Dispensador Jabón en Espuma/Tork_Dispensador_Jabón_en_Espuma___Sensor_Intuition_blanco 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338270",
+      "buyLink": "https://www.bimobject.com/es/essity-na/product/571600",
       "entornos": {
         "fondo1": {
           "preview": {

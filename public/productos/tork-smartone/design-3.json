@@ -2,31 +2,31 @@
   "id": "design-3",
   "productoId": "tork-smartone",
   "nombre": "SmartOne® Twin Mini",
-  "descripcion": "Dispensador de doble rollo para asegurar disponibilidad continua.",
+  "descripcion": "Sistema de dispensación moderno y eficaz, con doble consumible.",
   "trafico": "Tráfico: alto",
   "thumbnail": "public/assets/images/Higienicos/Dispensadores_Tork_SmartOne/Dispensadores_Tork_SmartOne_Mini_Twin_Negro.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/472061",
-  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
-  "dimensiones": { "alto": "22.1 cm", "ancho": "39.8 cm", "prof": "15.6 cm" },
+  "tutorialUrl": "https://www.youtube.com/embed/YeAO3RFG8fk",
+  "dimensiones": { "alto": "22.1 cm", "ancho": "39.8 cm", "prof": "15.7 cm" },
   "paginas": [
     {
-      "titulo": "Disponibilidad",
-      "contenido": "Doble rollo para evitar quedarse sin papel en horas pico."
-    },
-    {
-      "titulo": "Eficiencia",
-      "contenido": "Sistema de dispensación central que entrega una hoja a la vez."
-    },
-    {
       "titulo": "Gran Capacidad",
-      "contenido": "Ideal para baños con alto tráfico de personas que requieren poco mantenimiento."
+      "contenido": "Evita quedarte sin papel ya que tiene capacidad para 2 rollos de hasta 350 metros."
+    },
+    {
+      "titulo": "Ideal para Alto Tráfico",
+      "contenido": "El dispensador mini twin de papel higiénico es ideal para baños de alto tráfico."
+    },
+    {
+      "titulo": "Mantenimiento",
+      "contenido": "El dispensado de una hoja a la vez ayuda a evitar el bloqueo de cañerías."
     }
   ],
   "modelos": {
     "black": {
       "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Twist Negro 0.001.glb",
       "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Twist Negro 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/472061",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/682008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
       "entornos": {
         "fondo1": {
           "preview": {
@@ -63,7 +63,7 @@
     "white": {
       "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Twist Blanco 0.001.glb",
       "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Twist Blanco 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/472051",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/682000?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
       "entornos": {
         "fondo1": {
           "preview": {

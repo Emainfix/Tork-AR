@@ -3,7 +3,7 @@
   "productoId": "tork-panos-rollo",
   "arPlacement": "floor",
   "nombre": "Tork Dispensador Paños en Rollo",
-  "descripcion": "Dispensador de gran capacidad para paños de limpieza en rollo, diseñado para entornos industriales y de servicio.",
+  "descripcion": "Este dispensador de soporte de suelo resulta ideal para realizar diferentes tareas, gracias a sus ruedas traseras puedes moverlo y colocarlo donde lo necesites.",
   "trafico": "Tráfico: alto",
   "thumbnail": "public/assets/images/Paños de limpieza/Tork_Dispensador_Panos_en_Rollo/Tork_Dispensador_Panos_en_Rollo.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
@@ -27,7 +27,7 @@
     "normal": {
       "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.glb",
       "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Paños en Rollos/Tork_Dispensador_Paños_en_Rollo - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/652008",
       "entornos": {
         "fondo1": {
           "preview": {

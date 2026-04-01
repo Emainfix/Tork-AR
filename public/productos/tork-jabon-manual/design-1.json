@@ -2,7 +2,7 @@
   "id": "design-1",
   "productoId": "tork-jabon-manual",
   "nombre": "Dispensador Manual Jabón Spray, Líquido y Gel",
-  "descripcion": "Dispensador versátil compatible con tres tipos de jabones y gel sanitizante.",
+  "descripcion": "Sistemas ideales para todos tipos de baños, incluso en entornos exigentes.",
   "trafico": "Tráfico: alto",
   "thumbnail": "public/assets/images/Jabones/Tork_Dispensador_Manual_Jabon_Spray_liquido_y_gel/Tork_Dispensador_Manual_Jabon_Spray_liquido_y_gel_Negro.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/561008",
@@ -10,16 +10,16 @@
   "dimensiones": { "alto": "29.1 cm", "ancho": "11.2 cm", "prof": "11.4 cm" },
   "paginas": [
     {
-       "titulo": "Versatilidad",
-       "contenido": "Compatible con jabón en spray, líquido y alcohol en gel."
+      "titulo": "Versatilidad",
+      "contenido": "Compatible con jabón en spray, líquido y alcohol en gel."
     },
     {
-       "titulo": "Higiene Certificada",
-       "contenido": "Botellas selladas con bomba de un solo uso que reduce el riesgo de contaminación cruzada."
+      "titulo": "Higiene Certificada",
+      "contenido": "Botellas selladas con bomba de un solo uso que reduce el riesgo de contaminación cruzada."
     },
     {
-       "titulo": "Mantenimiento Sencillo",
-       "contenido": "Reposición de cartuchos en menos de 10 segundos, optimizando el tiempo del personal."
+      "titulo": "Mantenimiento Sencillo",
+      "contenido": "Reposición de cartuchos en menos de 10 segundos, optimizando el tiempo del personal."
     }
   ],
   "modelos": {

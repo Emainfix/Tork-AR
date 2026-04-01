@@ -14,20 +14,23 @@
 <body>
     <div class="app-container">
         <header class="main-header">
-            <img src="public/assets/logos/logo.png" alt="Logo de Tork" class="logo-image">
+            <a href="index.html" class="image-wrapper" style="height: 35px; width: auto;">
+                <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
+                <img src="public/assets/logos/logo.png" alt="Logo de Tork" class="logo-image" onload="this.previousElementSibling.classList.add('hidden')">
+            </a>
         </header>
-        <main class="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh; gap: 40px; text-align: center;">
-            <div style="padding: 0 20px;">
-                <h2 style="color: var(--dark-blue); font-size: 22px; margin-bottom: 15px; font-weight: 700;">Elige el sistema de higiene ideal para tu negocio</h2>
-                <p style="color: var(--text-blue); font-size: 16px;">Coloca el sistema que deseas sobre los espacios de tu negocio</p>
+        <main class="content index-main">
+            <div class="index-text">
+                <h2 class="index-title">Elige el sistema de higiene ideal para tu negocio</h2>
+                <p class="index-subtitle">Coloca el sistema que deseas sobre los espacios de tu negocio</p>
             </div>
 
-            <div class="action-buttons" style="width: 100%; max-width: 320px; gap: 20px;">
-                <a href="categorias.html" class="btn btn-primary" style="text-decoration: none;">
-                    Conozco los sistemas
+            <div class="action-buttons index-buttons">
+                <a href="categorias.html" class="btn btn-primary btn-home">
+                    Ver sistemas
                 </a>
-                <button class="btn btn-outline" disabled style="opacity: 0.6; cursor: not-allowed;">
-                    Quiero una recomendación
+                <button class="btn btn-outline btn-home" disabled>
+                    Ayúdame a elegir
                 </button>
             </div>
         </main>

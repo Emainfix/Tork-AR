@@ -2,10 +2,10 @@
   "id": "design-1",
   "productoId": "tork-fluido-centrico",
   "nombre": "Tork Dispensador Toalla para Manos Fluido Céntrico",
-  "descripcion": "Dispensador de gran capacidad con sistema de fluido céntrico para una dosificación eficiente.",
+  "descripcion": "Toma una toalla a la vez con una sola mano ahorrando en consumo.",
   "trafico": "Tráfico: alto",
   "thumbnail": "public\\assets\\images\\Tork_Dispensador_Toalla_para_Manos_Fluido_Centrico\\Tork_Dispensador_Toalla_para_Manos_Fluido_Centrico.jpg",
-  "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+  "buyLink": "https://www.bimobject.com/es/essity-na/product/559028a",
   "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
   "dimensiones": { "alto": "35.6 cm", "ancho": "24.8 cm", "prof": "23.2 cm" },
   "paginas": [
@@ -26,7 +26,7 @@
     "black": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Dispensador Toalla para Manos Fluido Céntrico/Tork_Dispensador_Toalla_para_Manos_Fluido_Céntrico___Negro_0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Dispensador Toalla para Manos Fluido Céntrico/Tork_Dispensador_Toalla_para_Manos_Fluido_Céntrico___Negro_0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "buyLink": "https://www.bimobject.com/es/essity-na/product/559028a",
       "entornos": {
         "fondo1": {
           "preview": {
@@ -63,7 +63,7 @@
     "white": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Dispensador Toalla para Manos Fluido Céntrico/Tork_Dispensador_Toalla_para_Manos_Fluido_Céntrico___Blanco_0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Dispensador Toalla para Manos Fluido Céntrico/Tork_Dispensador_Toalla_para_Manos_Fluido_Céntrico___Blanco_0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338270",
+      "buyLink": "https://www.bimobject.com/es/essity-na/product/559020a",
       "entornos": {
         "fondo1": {
           "preview": {

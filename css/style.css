@@ -1,7 +1,7 @@
 :root {
-    --primary-blue: #009FE3;
-    --dark-blue: #0A3254;
-    --text-blue: #0f4b81;
+    --primary-blue: #009edd;
+    --dark-blue: #003366;
+    --text-blue: #003366;
     --white: #ffffff;
     --border-gray: #e0e0e0;
     --font-stack: 'Roboto', sans-serif;
@@ -90,21 +90,41 @@ body {
 }
 
 .back-button {
-    background: none;
+    position: relative;
+    z-index: 10; /* Asegura que esté por encima del título */
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'); /* Fix para hit-testing en áreas transparentes */
+    background-color: transparent;
     border: none;
-    color: var(--white);
-    font-size: 22px;
-    cursor: pointer;
+    border-radius: 50%;
     width: 35px;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Capa transparente que cubre todo el botón para capturar el click */
+.back-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0); /* Invisible pero clickeable */
+    z-index: 10;
+}
+
+.back-button:active {
+    transform: scale(0.9);
 }
 
 .back-button .fab-icon-img {
     width: 35px;
     height: 35px;
+    pointer-events: none; /* Evita que el SVG bloquee el click */
 }
 
 .nav-title {
@@ -660,17 +680,19 @@ button[slot="hotspot-depth"]::after {
     text-align: left;
 }
 
-/* Action Buttons */
+/* Action Buttons & Category Grid */
 .action-buttons,
 .category-buttons {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center; /* Center buttons horizontally */
 }
 
 .btn {
     width: 100%;
+    max-width: 320px; /* Tamaño estándar de botón */
     padding: 14px 20px;
     border-radius: 30px;
     font-size: 18px;
@@ -678,10 +700,21 @@ button[slot="hotspot-depth"]::after {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Volver a centrar por defecto */
     gap: 12px;
     transition: background-color 0.2s, transform 0.1s;
     text-decoration: none;
+}
+
+/* Botones con alineación a la izquierda (usado en visor) */
+.btn-aligned-icon {
+    justify-content: flex-start;
+    padding-left: 65px; /* Restaurar el offset pedido anteriormente solo aquí */
+}
+
+/* Ajustes específicos para el landing/home */
+.btn-home {
+    font-size: 19px; /* Un poco mas grande para llamar la atención en el index */
 }
 
 .btn:active {
@@ -1306,6 +1339,107 @@ button[slot="hotspot-depth"]::after {
 
 .onboarding-skip:hover {
     background: rgba(0, 0, 0, 0.5);
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: var(--text-blue);
+    font-size: 17px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.category-item:active {
+    background-color: rgba(0, 159, 227, 0.05);
+}
+
+.category-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+}
+
+.category-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.category-name {
+    flex: 1;
+}
+
+.category-item .chevron {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Desktop styles for category list focus */
+@media (min-width: 800px) {
+    .category-list {
+        max-width: 600px;
+        margin: 40px auto;
+        border: 1px solid #f0f0f0;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        background-color: var(--white);
+        overflow: hidden; /* Round icon/item backgrounds */
+    }
+    
+    .category-item:last-child {
+        border-bottom: none; /* No line at the end */
+    }
+
+    .index-main {
+        padding-top: 5vh !important;
+        justify-content: flex-start !important;
+    }
+}
+
+.index-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    gap: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+.index-text {
+    padding: 0 20px;
+}
+
+.index-title {
+    color: var(--dark-blue);
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.index-subtitle {
+    color: var(--text-blue);
+    font-size: 16px;
+}
+
+.index-buttons {
+    width: 100%;
+    max-width: 320px !important; /* Ensure consistency with and without icons */
+    gap: 20px;
 }
 
 .onboarding-highlighted {

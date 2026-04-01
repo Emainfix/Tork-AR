@@ -2,7 +2,7 @@
   "id": "design-1",
   "productoId": "tork-top-pak",
   "nombre": "Tork Dispensador para Paños Top Pak",
-  "descripcion": "Dispensador portátil para paños de limpieza en formato Top Pak.",
+  "descripcion": "Protege el consumible de la suciedad y ofrece una dispensación individual.",
   "trafico": "Tráfico: medio",
   "thumbnail": "public/assets/images/Paños de limpieza/Tork_Dispensador_para_Panos_Top_Pak/Tork_Dispensador_para_Panos_Top_Pak.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
@@ -26,7 +26,7 @@
     "normal": {
       "glb": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Para Paños Top Pak/Tork_Dispensador_para_Paños_Top_Pak - 0.001.glb",
       "usdz": "public/assets/modelos/Paños de Limpieza/Tork Dispensador Para Paños Top Pak/Tork_Dispensador_para_Paños_Top_Pak - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/654000",
       "entornos": {
         "fondo1": {
           "preview": {

@@ -2,24 +2,20 @@
   "id": "design-3",
   "productoId": "tork-higienico-bobina",
   "nombre": "Dispensador en Bobina Acero Inoxidable",
-  "descripcion": "Acabado premium en acero inoxidable para una imagen moderna y duradera.",
-  "trafico": "Tráfico: alto",
+  "descripcion": "Diseño moderno y elegante, recubrimiento antihuellas.",
+  "trafico": "Tráfico: bajo - medio",
   "thumbnail": "public/assets/images/Higienicos/Tork_Dispensador_Higiénico_en_Bobina/Tork_Dispensador_Higiénico_en_Bobina_Acero.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/460006",
-  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
-  "dimensiones": { "alto": "35.5 cm", "ancho": "43.7 cm", "prof": "13.3 cm" },
+  "tutorialUrl": "https://www.youtube.com/embed/7RuHEqiX3vQ",
+  "dimensiones": { "alto": "25.4 cm", "ancho": "35.5 cm", "prof": "13.3 cm" },
   "paginas": [
     {
-      "titulo": "Premium",
-      "contenido": "Cuerpo de acero inoxidable que combina elegancia y resistencia extrema."
+      "titulo": "Diseño",
+      "contenido": "Sistema de dispensación con un diseño moderno e impecable."
     },
     {
-      "titulo": "Higiene",
-      "contenido": "Superficie de acero inoxidable fácil de limpiar y sanitizar."
-    },
-    {
-      "titulo": "Durabilidad",
-      "contenido": "Construcción robusta anti-vandálica para entornos de tráfico muy intenso."
+      "titulo": "Servicio",
+      "contenido": "El sistema de dispensador cerrado protege el papel higiénico y favorece la higiene."
     }
   ],
   "modelos": {

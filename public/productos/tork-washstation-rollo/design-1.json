@@ -2,7 +2,7 @@
   "id": "design-1",
   "productoId": "tork-washstation-rollo",
   "nombre": "Tork Washstation Dispensador Toalla de Manos en Rollo",
-  "descripcion": "Dispensador especialmente diseñado para áreas de preparación de alimentos con alto grado de higiene.",
+  "descripcion": "Diseño duradero y resistente al agua, apto para cualquier ambiente.",
   "trafico": "Tráfico: alto",
   "thumbnail": "public/assets/images/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo/Miniaturas.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
@@ -26,7 +26,7 @@
     "normal": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Washstation Dispensador Toalla de Manos en Rollo/Tork_Washstation_Dispensador_Toalla_de_Manos_en_Rollo - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/651420",
       "entornos": {
         "fondo1": {
           "preview": {

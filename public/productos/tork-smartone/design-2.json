@@ -2,62 +2,98 @@
   "id": "design-2",
   "productoId": "tork-smartone",
   "nombre": "SmartOne® Mini",
-  "descripcion": "Ideal para espacios reducidos con tráfico moderado a alto.",
-  "trafico": "Tráfico: medio",
+  "descripcion": "Sistema de dispensación moderno y eficaz adecuado para aseos exigentes.",
+  "trafico": "Tráfico: bajo - medio",
   "thumbnail": "public/assets/images/Higienicos/Dispensadores_Tork_SmartOne/Dispensadores_Tork_SmartOne_Mini_Blanco.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/472068",
-  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
+  "tutorialUrl": "https://www.youtube.com/embed/49SheWZ1aRE",
   "dimensiones": { "alto": "21.9 cm", "ancho": "21.9 cm", "prof": "15.6 cm" },
   "paginas": [
     {
       "titulo": "Compacto",
-      "contenido": "Diseño redondo compacto que ahorra espacio."
+      "contenido": "Ideal para baños de tráfico medio o bajo."
     },
     {
-       "titulo": "Sustentabilidad",
-       "contenido": "Ayuda a reducir el desperdicio al dispensar solo una hoja a la vez."
+      "titulo": "Eficiencia",
+      "contenido": "Reduce el consumo de papel hasta en un 40% gracias a su dispensado una hoja a la vez."
     },
     {
-       "titulo": "Higiene",
-       "contenido": "El rollo queda protegido de salpicaduras y suciedad dentro del dispensador."
+      "titulo": "Mantenimiento",
+      "contenido": "El dispensado de una hoja a la vez ayuda a evitar el bloqueo de cañerías."
     }
   ],
   "modelos": {
     "black": {
       "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb",
       "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/472068",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/681008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
       "entornos": {
         "fondo1": {
-          "preview": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz" },
-          "ar": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz" }
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz"
+          }
         },
         "fondo2": {
-          "preview": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz" },
-          "ar": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz" }
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz"
+          }
         },
         "fondo3": {
-          "preview": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz" },
-          "ar": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz" }
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Negro 0.001.usdz"
+          }
         }
       }
     },
     "white": {
       "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb",
       "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/472050",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/681000?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
       "entornos": {
         "fondo1": {
-          "preview": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz" },
-          "ar": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz" }
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz"
+          }
         },
         "fondo2": {
-          "preview": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz" },
-          "ar": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz" }
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz"
+          }
         },
         "fondo3": {
-          "preview": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz" },
-          "ar": { "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb", "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz" }
+          "preview": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz"
+          },
+          "ar": {
+            "glb": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.glb",
+            "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Papel Higiénico Smartone/Tork Dispensador Papel Higiénico Smartone Mini Blanco 0.001.usdz"
+          }
         }
       }
     }

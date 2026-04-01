@@ -10,7 +10,9 @@
 <body>
     <div class="app-container">
         <header class="main-header">
-            <img src="public/assets/logos/logo.png" alt="Logo de Tork" class="logo-image">
+            <a href="index.html">
+                <img src="public/assets/logos/logo.png" alt="Logo de Tork" class="logo-image">
+            </a>
         </header>
         <nav class="top-nav">
             <a href="categorias.html" class="back-button">
@@ -58,9 +60,9 @@
                             <div style="width: 60px; height: 60px; background: #fff; border: 1px solid #eee; border-radius: 4px; margin-right: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
                                 <img src="${thumbSrc}" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.src='public/assets/images/image.png'">
                             </div>
-                            <div style="flex: 1;">
-                                <div style="font-weight: bold;">${prod.nombre}</div>
-                                <div style="font-size: 0.8rem; color: #666;">Ver detalles y AR</div>
+                            <div style="flex: 1; padding-right: 15px;">
+                                <div style="font-weight: bold; margin-bottom: 4px;">${prod.nombre}</div>
+                                <div style="font-size: 0.8rem; color: #666;">Ver diseños</div>
                             </div>
                             <i class="fa-solid fa-chevron-right" style="color: #ccc;"></i>
                         `;

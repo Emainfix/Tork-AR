@@ -2,31 +2,31 @@
   "id": "design-1",
   "productoId": "tork-higienico-bobina",
   "nombre": "Dispensador en Bobina",
-  "descripcion": "Dispensador clásico de alto rendimiento para papel higiénico en bobina.",
-  "trafico": "Tráfico: alto",
+  "descripcion": "Su diseño protege el papel y favorece un entorno higiénico",
+  "trafico": "Tráfico: bajo - medio",
   "thumbnail": "public/assets/images/Higienicos/Tork_Dispensador_Higiénico_en_Bobina/Tork_Dispensador_Higiénico_en_Bobina_Negro.jpg",
-  "buyLink": "https://www.bimobject.com/es/essity-eu/product/554008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
-  "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
-  "dimensiones": { "alto": "36.0 cm", "ancho": "43.7 cm", "prof": "13.3 cm" },
+  "buyLink": "https://www.bimobject.com/es/essity-eu/product/555008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+  "tutorialUrl": "https://www.youtube.com/embed/i-kOb2iYkq8",
+  "dimensiones": { "alto": "27.5 cm", "ancho": "34.5 cm", "prof": "13.2 cm" },
   "paginas": [
     {
-       "titulo": "Resistencia",
-       "contenido": "Carcasa robusta ideal para entornos exigentes."
+      "titulo": "Recambio",
+      "contenido": "La ventana transparente indica cuando es necesario colocar un nuevo rollo."
     },
     {
-       "titulo": "Higiene",
-       "contenido": "Solo se toca la hoja de papel que se va a utilizar."
+      "titulo": "Resistencia",
+      "contenido": "Fabricado con plástica ABS de alta resistencia."
     },
     {
-       "titulo": "Eficiencia",
-       "contenido": "Dispensador de gran capacidad para minimizar el mantenimiento."
+      "titulo": "Eficiencia",
+      "contenido": "El eficaz sistema de freno evita que el rollo gire sin control, reduciendo el consumo."
     }
   ],
   "modelos": {
     "black": {
       "glb": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.glb",
       "usdz": "public/assets/modelos/Higienicos/Tork Dispensador Higiénico en Bobina/Tork_Dispensador_Higiénico_en_Bobina___Negro 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/554008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/555008?utm_source=defaultSource&utm_medium=defaultMedium&utm_campaign=defaultCampaign",
       "entornos": {
         "fondo1": {
           "preview": {

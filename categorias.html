@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tork - Categorías</title>
+    <title>Tork - Sistemas Tork</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="app-container">
         <header class="main-header">
-            <img src="public/assets/logos/logo.png" alt="Logo de Tork" class="logo-image">
+            <a href="index.html">
+                <img src="public/assets/logos/logo.png" alt="Logo de Tork" class="logo-image">
+            </a>
         </header>
         <nav class="top-nav">
             <a href="index.html" class="back-button">
                 <img src="public/assets/icon/boton regresar blanco.svg" alt="Regresar" class="fab-icon-img">
             </a>
-            <h1 class="nav-title">Categorías</h1>
+            <h1 class="nav-title">Sistemas Tork</h1>
         </nav>
-        <main class="content">
-            <div id="categories-grid" class="category-buttons">
+        <main class="content" style="padding: 0;">
+            <div id="categories-grid" class="category-list">
                 <!-- Contenido generado por JS -->
             </div>
         </main>
@@ -35,14 +37,17 @@
             .then(data => {
                 const grid = document.getElementById('categories-grid');
                 data.categorias.forEach(cat => {
-                    const card = document.createElement('a');
-                    card.href = `productos.html?cat=${cat.id}`;
-                    card.className = "btn btn-outline";
-                    card.innerHTML = `
-                        <img src="${cat.thumbnail || 'public/assets/images/placeholder.jpg'}" class="fab-icon-img" style="border-radius: 4px;" onerror="this.src='public/assets/images/placeholder.jpg'">
-                        <span>${cat.nombre}</span>
+                    const item = document.createElement('a');
+                    item.href = `productos.html?cat=${cat.id}`;
+                    item.className = "category-item";
+                    item.innerHTML = `
+                        <div class="category-icon-wrapper">
+                            <img src="${cat.thumbnail || 'public/assets/images/placeholder.jpg'}" class="category-icon" onerror="this.src='public/assets/images/placeholder.jpg'">
+                        </div>
+                        <span class="category-name">${cat.nombre}</span>
+                        <i class="fa-solid fa-chevron-right chevron"></i>
                     `;
-                    grid.appendChild(card);
+                    grid.appendChild(item);
                 });
             });
     </script>

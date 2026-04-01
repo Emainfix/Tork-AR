@@ -3,8 +3,8 @@
   "productoId": "tork-xpress-interdoblada-countertop",
   "arPlacement": "floor",
   "nombre": "Tork Xpress® Dispensador Toalla Interdoblada Countertop Acero Inoxidable",
-  "descripcion": "Acabado premium de acero inoxidable para colocar sobre el mostrador.",
-  "trafico": "Tráfico: bajo/medio",
+  "descripcion": "No requiere instalación en la pared, facil de ajustar a cualquier negocio.",
+  "trafico": "Tráfico: bajo - medio",
   "thumbnail": "public/assets/images/Tork Xpress_Dispensador_Toalla_Interdoblada_Countertop/Tork Xpress_Dispensador_Toalla_Interdoblada_Countertop_Acero_Inoxidable.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
   "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
@@ -27,7 +27,7 @@
     "steel": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada Conuntertop/Tork Xpress Dispensador Toalla Interdoblada Conuntertop - Acero - 0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada Conuntertop/Tork Xpress Dispensador Toalla Interdoblada Conuntertop - Acero - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/460005",
       "entornos": {
         "fondo1": {
           "preview": {

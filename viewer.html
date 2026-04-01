@@ -30,10 +30,10 @@
         
         <!-- Header -->
         <header class="main-header">
-            <div class="image-wrapper" style="height: 35px; width: auto;">
+            <a href="index.html" class="image-wrapper" style="height: 35px; width: auto; display: block; margin: 0 auto; text-decoration: none;">
                 <div class="loader-container"><div class="loading-spinner spinner-small"></div></div>
                 <img src="public/assets/logos/logo.png" alt="Logo de Tork" class="logo-image" onload="this.previousElementSibling.classList.add('hidden')">
-            </div>
+            </a>
         </header>
 
         <!-- Navigation Bar -->
@@ -55,7 +55,7 @@
                     <div class="loading-spinner"></div>
                 </div>
 
-                <model-viewer id="product-viewer" src="" ios-src="" alt="Tork Dispensador" class="product-image" disable-pan camera-controls shadow-intensity="0.0" disable-zoom ar ar-placement="wall" ar-modes="webxr scene-viewer quick-look" camera-orbit="-18deg 78deg auto" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 100deg auto">
+                <model-viewer id="product-viewer" src="" ios-src="" alt="Tork Dispensador" class="product-image" disable-pan camera-controls shadow-intensity="0.0" disable-zoom ar ar-placement="wall" ar-modes="webxr scene-viewer quick-look" camera-orbit="-18deg 78deg auto" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 100deg auto" style="background-color: unset">
                     <button slot="hotspot-dot+X-Y+Z" class="dot hide" data-position="0 0 0" data-normal="1 0 0"></button>
                     <button slot="hotspot-dim+X-Y" class="dim hide" data-position="0 0 0" data-normal="1 0 0"></button>
                     <button slot="hotspot-dot+X-Y-Z" class="dot hide" data-position="0 0 0" data-normal="1 0 0"></button>

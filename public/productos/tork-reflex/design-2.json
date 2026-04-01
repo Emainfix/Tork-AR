@@ -2,8 +2,8 @@
   "id": "design-2",
   "productoId": "tork-reflex",
   "nombre": "Tork Reflex™ Mini",
-  "descripcion": "Dispensador compacto de alimentación central para espacios pequeños.",
-  "trafico": "Tráfico: bajo/medio",
+  "descripcion": "Toalla de fluido céntrico cuenta con una boquilla que gira para que puedas tomar la toalla con una sola mano.",
+  "trafico": "Tráfico: bajo - medio",
   "thumbnail": "public\\assets\\images\\Tork_Reflex\\Tork_Reflex_Mini.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
   "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
@@ -26,7 +26,7 @@
     "normal": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Reflex/Tork_Reflex___Mini - 0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Reflex/Tork_Reflex___Mini - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/473177",
       "entornos": {
         "fondo1": {
           "preview": {

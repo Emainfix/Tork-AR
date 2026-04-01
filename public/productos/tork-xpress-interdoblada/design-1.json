@@ -2,8 +2,8 @@
   "id": "design-1",
   "productoId": "tork-xpress-interdoblada",
   "nombre": "Tork Xpress® Dispensador Toalla Interdoblada Maxi",
-  "descripcion": "Dispensador de gran capacidad con diseño extra delgado.",
-  "trafico": "Tráfico: alto",
+  "descripcion": "Sistema adecuado para entornos que exigen comodidad e higiene.",
+  "trafico": "Tráfico: bajo - medio",
   "thumbnail": "public/assets/images/Tork Xpress_Dispensador_Toalla_Interdoblada/Tork Xpress_Dispensador_Toalla_Interdoblada_Maxi_Elevation_Negro.jpg",
   "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
   "tutorialUrl": "https://www.youtube.com/embed/3J1tc1fT32w",
@@ -26,7 +26,7 @@
     "black": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_Negro - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338271",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/552008",
       "entornos": {
         "fondo1": {
           "preview": {
@@ -63,7 +63,7 @@
     "white": {
       "glb": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.glb",
       "usdz": "public/assets/modelos/ToallasParaManos/Tork Xpress Dispensador Toalla Interdoblada/Tork_Xpress_Dispensador_Toalla_Interdoblada___Maxi_blanco - 0.001.usdz",
-      "buyLink": "https://www.bimobject.com/es/essity-eu/product/338270",
+      "buyLink": "https://www.bimobject.com/es/essity-eu/product/552000",
       "entornos": {
         "fondo1": {
           "preview": {

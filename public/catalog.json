@@ -3,7 +3,7 @@
     {
       "id": "higienicos",
       "nombre": "Higienicos",
-      "thumbnail": "public/assets/icon/uvrx8egtn8dq5a6hyryq.svg",
+      "thumbnail": "public/assets/icon/higienicos.svg",
       "productos": [
         {
           "id": "tork-higienico-bobina",
@@ -20,7 +20,7 @@
     {
       "id": "servilletas",
       "nombre": "Servilletas",
-      "thumbnail": "public/assets/icon/kye4en6ykt6v8ta61wat.svg",
+      "thumbnail": "public/assets/icon/servilletas.svg",
       "productos": [
         {
           "id": "tork-xpressnap-cafe",
@@ -52,7 +52,7 @@
     {
       "id": "toallas-manos",
       "nombre": "Toallas para manos",
-      "thumbnail": "public/assets/icon/osjned1w0ecbtt6eqw0x.svg",
+      "thumbnail": "public/assets/icon/toallas para manos.svg",
       "productos": [
         {
           "id": "tork-matic-dispensador-rollo",
@@ -94,7 +94,7 @@
     {
       "id": "jabones-tork",
       "nombre": "Jabones Tork",
-      "thumbnail": "public/assets/icon/lqxapyvh72ht42prjbqw.svg",
+      "thumbnail": "public/assets/icon/jabones.svg",
       "productos": [
         {
           "id": "tork-jabon-espuma",
@@ -111,7 +111,7 @@
     {
       "id": "panos-limpieza",
       "nombre": "Paños de limpieza",
-      "thumbnail": "public/assets/icon/kye4en6ykt6v8ta61wat.svg",
+      "thumbnail": "public/assets/icon/panos de limpieza.svg",
       "productos": [
         {
           "id": "tork-panos-rollo",
