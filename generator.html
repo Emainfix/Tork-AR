@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tork - Generador de Enlaces de Seguimiento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #002d72;
+            --secondary-color: #0072ce;
+            --accent-color: #fdb913;
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --border-color: #e1e8ed;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+
+        .generator-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .form-section {
+            margin-bottom: 25px;
+        }
+
+        .form-section-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        input:not([type="checkbox"]), select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            box-sizing: border-box;
+            background-color: white;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        /* Checkbox specific styles */
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin: 0;
+            accent-color: var(--primary-color);
+        }
+
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(0, 114, 206, 0.1);
+        }
+
+        .result-container {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .url-preview {
+            word-break: break-all;
+            font-family: monospace;
+            background: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #dee2e6;
+            margin-bottom: 15px;
+            min-height: 40px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            font-size: 1rem;
+            gap: 8px;
+            min-height: 48px; /* Tappable area */
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .btn-primary:active {
+            background-color: #001f4d;
+            transform: scale(0.98);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .btn-success {
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .btn-outline {
+            flex: 1;
+            min-width: 140px;
+            background: white;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(4px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .generator-container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                flex: none;
+            }
+
+            input:not([type="checkbox"]), select, textarea {
+                font-size: 16px; /* Evita zoom en iOS */
+            }
+        }
+
+        /* Product Checkboxes */
+        .product-filter-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: #f5f5f5;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 8px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: background 0.2s;
+            border-radius: 6px;
+        }
+
+        .checkbox-group:hover {
+            background: #f9f9f9;
+        }
+
+        .checkbox-group:last-child {
+            border-bottom: none;
+        }
+
+        .variant-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .variant-thumb {
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .checkbox-group span {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            font-weight: 500;
+            user-select: none;
+        }
+
+        .color-symbol {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1px #ddd;
+            flex-shrink: 0;
+        }
+
+        .black-symbol { background-color: #222; }
+        .white-symbol { background-color: #eee; }
+        .steel-symbol { background-color: #999; }
+        
+        /* Modern Toggle Switch Style */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .3s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .3s;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        input:checked + .slider {
+            background-color: var(--secondary-color);
+        }
+
+        input:checked:disabled + .slider {
+            background-color: #a0c4e1; /* Color más suave para deshabilitado */
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="generator-container">
+        <header class="header">
+            <img src="public/assets/logos/logo.png" alt="Tork Logo" style="height: 40px; margin-bottom: 20px;">
+            <h1>Generador de Enlaces Externos</h1>
+            <p>Crea enlaces con seguimiento para compartir con clientes</p>
+        </header>
+
+        <div class="card">
+            <div class="form-section">
+                <div class="form-section-title">Destino del Enlace</div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="linkType">Tipo de Enlace</label>
+                        <select id="linkType">
+                            <option value="product" selected>Producto Específico</option>
+                            <option value="category">Categoría</option>
+                            <option value="general">General (Inicio)</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="itemSelectorGroup">
+                        <label id="itemSelectorLabel" for="itemSelector">Elemento</label>
+                        <select id="itemSelector" disabled>
+                            <option value="">Seleccione una opción...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="productFilterContainer" class="hidden" style="margin-top: 15px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label style="margin-bottom: 0;">Habilitar productos específicos</label>
+                        <div style="display: flex; gap: 10px;">
+                            <button type="button" id="selectAll" style="background: none; border: none; color: var(--secondary-color); font-size: 0.8rem; cursor: pointer; padding: 0; font-weight: 600;">Seleccionar todos</button>
+                            <button type="button" id="deselectAll" style="background: none; border: none; color: var(--text-muted); font-size: 0.8rem; cursor: pointer; padding: 0; font-weight: 600;">Deseleccionar todos</button>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #666; margin-bottom: 8px;">Si no seleccionas ninguno, se mostrarán todos.</p>
+                    <div id="productFilterList" class="product-filter-list">
+                        <!-- Checkboxes se generan por JS -->
+                    </div>
+                </div>
+
+                <!-- Nueva sección para variantes -->
+                <div id="variantFilterContainer" class="hidden" style="margin-top: 15px;">
+                    <div class="form-section-title" style="font-size: 0.8rem; border: none; margin-bottom: 10px;">Filtrar Variantes (Diseños y Colores)</div>
+                    
+                    <div id="designsFilterSection">
+                        <label style="font-size: 0.85rem;">Diseños permitidos</label>
+                        <div id="designsFilterList" class="product-filter-list" style="margin-bottom: 15px;"></div>
+                    </div>
+
+                    <div id="colorsFilterSection">
+                        <label style="font-size: 0.85rem;">Colores permitidos</label>
+                        <div id="colorsFilterList" class="product-filter-list"></div>
+                    </div>
+                    
+                    <!-- Campo para personalización de link de compra -->
+                    <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border-color);">
+                        <label for="custom_buy_link" style="font-size: 0.85rem;">Personalizar Botón "Compra Ya" (URL)</label>
+                        <input type="url" id="custom_buy_link" placeholder="https://mi-tienda.com/producto-especifico" style="margin-top: 5px;">
+                        <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Si se deja vacío, usará el link de compra por defecto del producto.</p>
+                    </div>
+
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 10px;">Nota: Si no seleccionas ninguna variante, se mostrarán todas las opciones disponibles.</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-section-title">Parámetros de Seguimiento (UTM)</div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="utm_source">Canal / Fuente (Source)</label>
+                        <select id="utm_source">
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="email">Email</option>
+                            <option value="reunion">Reunión / Presentación</option>
+                            <option value="qr">Código QR</option>
+                            <option value="linkedin">LinkedIn</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="utm_medium">Medio (Medium)</label>
+                        <select id="utm_medium">
+                            <option value="ventas">Ventas / Comercial</option>
+                            <option value="demo">Demo / Prueba</option>
+                            <option value="marketing">Marketing</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="utm_content">ID de Vendedor (Content)</label>
+                        <input type="text" id="utm_content" placeholder="ej: juan_perez">
+                    </div>
+                    <div class="form-group">
+                        <label for="utm_campaign">Cliente / Empresa (Campaign)</label>
+                        <input type="text" id="utm_campaign" placeholder="ej: hotel_central">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="custom_campaign_name">Nombre de Campaña (Opcional)</label>
+                    <input type="text" id="custom_campaign_name" placeholder="ej: promocion_verano">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-section-title">Mensaje Adicional</div>
+                <div class="form-group">
+                    <label for="message">Mensaje para compartir (Opcional)</label>
+                    <textarea id="message" rows="3" placeholder="Hola, te comparto el catálogo 3D de Tork..."></textarea>
+                </div>
+            </div>
+
+            <div class="result-container">
+                <label>Enlace Generado</label>
+                <div id="generatedUrl" class="url-preview">Selecciona los campos para generar el enlace...</div>
+                
+                <div id="messagePreviewSection" class="hidden">
+                    <label>Mensaje para compartir</label>
+                    <div id="finalMessage" class="url-preview" style="white-space: pre-wrap; font-family: inherit;"></div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-primary" id="copyBtn">
+                        <i class="fa-regular fa-copy"></i> Copiar Link
+                    </button>
+                    <button class="btn btn-secondary" id="copyFullBtn">
+                        <i class="fa-regular fa-clone"></i> Copiar Mensaje
+                    </button>
+                    <button class="btn btn-success" id="shareWAP" style="background-color: #25D366; color: white;">
+                        <i class="fa-brands fa-whatsapp"></i> Compartir
+                    </button>
+                    <button class="btn btn-outline" id="openBtn" style="border: 1px solid var(--border-color); flex: 0.5;">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Probar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">¡Copiado al portapapeles!</div>
+
+    <script>
+        const colorTranslations = { 'black': 'Negro', 'white': 'Blanco', 'steel': 'Acero' };
+        
+        const linkType = document.getElementById('linkType');
+        const itemSelector = document.getElementById('itemSelector');
+        const itemSelectorLabel = document.getElementById('itemSelectorLabel');
+        const itemSelectorGroup = document.getElementById('itemSelectorGroup');
+        const utmSource = document.getElementById('utm_source');
+        const utmMedium = document.getElementById('utm_medium');
+        const utmCampaign = document.getElementById('utm_campaign');
+        const customCampaignName = document.getElementById('custom_campaign_name');
+        const utmContent = document.getElementById('utm_content');
+        const customMessage = document.getElementById('message');
+        const generatedUrl = document.getElementById('generatedUrl');
+        const finalMessage = document.getElementById('finalMessage');
+        const messagePreviewSection = document.getElementById('messagePreviewSection');
+        
+        const productFilterContainer = document.getElementById('productFilterContainer');
+        const productFilterList = document.getElementById('productFilterList');
+        
+        const selectAllBtn = document.getElementById('selectAll');
+        const deselectAllBtn = document.getElementById('deselectAll');
+        
+        const copyBtn = document.getElementById('copyBtn');
+        const copyFullBtn = document.getElementById('copyFullBtn');
+        const shareWAP = document.getElementById('shareWAP');
+        const openBtn = document.getElementById('openBtn');
+        const toast = document.getElementById('toast');
+
+        let catalogData = null;
+        let productsData = [];
+
+        Promise.all([
+            fetch('public/catalog.json').then(r => r.json()),
+            fetch('public/productos-index.json').then(r => r.json())
+        ]).then(([catalog, products]) => {
+            catalogData = catalog;
+            productsData = products.productos;
+            updateItemSelector();
+        }).catch(err => console.error("Error cargando datos:", err));
+
+        function updateItemSelector() {
+            const type = linkType.value;
+            itemSelector.innerHTML = '<option value="">Seleccione una opción...</option>';
+            productFilterContainer.classList.add('hidden');
+            productFilterList.innerHTML = '';
+            
+            if (type === 'general') {
+                itemSelector.disabled = true;
+                itemSelectorGroup.style.opacity = '0.5';
+            } else {
+                itemSelector.disabled = false;
+                itemSelectorGroup.style.opacity = '1';
+                if (type === 'category') {
+                    itemSelectorLabel.textContent = 'Categoría';
+                    catalogData.categorias.forEach(cat => {
+                        const opt = document.createElement('option');
+                        opt.value = cat.id; opt.textContent = cat.nombre;
+                        itemSelector.appendChild(opt);
+                    });
+                } else if (type === 'product') {
+                    itemSelectorLabel.textContent = 'Producto';
+                    productsData.forEach(prod => {
+                        const opt = document.createElement('option');
+                        opt.value = prod.id; opt.textContent = prod.nombre;
+                        itemSelector.appendChild(opt);
+                    });
+                }
+            }
+            generateFinalUrl();
+            updateVariantFilter();
+        }
+
+        async function updateVariantFilter() {
+            const type = linkType.value;
+            const itemId = itemSelector.value;
+            productFilterContainer.classList.add('hidden');
+            productFilterList.innerHTML = '';
+
+            if (type === 'general') {
+                productFilterContainer.classList.remove('hidden');
+                for (const cat of catalogData.categorias) {
+                    const catBlock = document.createElement('div');
+                    catBlock.className = 'category-group-block';
+                    catBlock.style.margin = '20px 0 10px 0';
+                    
+                    const catHeader = document.createElement('div');
+                    catHeader.style.cssText = 'display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; background: var(--primary-color); color: white; border-radius: 8px 8px 0 0; font-weight: 700;';
+                    catHeader.innerHTML = `
+                        <span>${cat.nombre}</span>
+                        <label class="switch">
+                            <input type="checkbox" class="category-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    `;
+                    catBlock.appendChild(catHeader);
+
+                    const catProductsList = document.createElement('div');
+                    catProductsList.className = 'category-products-list';
+                    catProductsList.style.cssText = 'padding: 15px; background: #eee; border: 1px solid #ddd; border-top: none; border-radius: 0 0 8px 8px; display: flex; flex-direction: column; gap: 12px;';
+                    catBlock.appendChild(catProductsList);
+                    productFilterList.appendChild(catBlock);
+
+                    const catToggle = catHeader.querySelector('.category-toggle');
+                    
+                    // Inicializar visibilidad basado en el toggle
+                    catProductsList.style.display = catToggle.checked ? 'flex' : 'none';
+
+                    catToggle.addEventListener('change', () => {
+                        catProductsList.style.display = catToggle.checked ? 'flex' : 'none';
+                        
+                        // Si se apaga la categoria, apagar todo lo de adentro
+                        if (!catToggle.checked) {
+                            catProductsList.querySelectorAll('.product-toggle').forEach(pt => {
+                                if (pt.checked) {
+                                    pt.checked = false;
+                                    pt.dispatchEvent(new Event('change'));
+                                }
+                            });
+                        }
+                    });
+
+                    for (const p of cat.productos) {
+                        try {
+                            const res = await fetch(`public/productos/${p.id}.json`);
+                            const manifest = await res.json();
+                            const designs = await Promise.all(Object.entries(manifest.designs || {}).map(async ([id, path]) => {
+                                const dRes = await fetch(path);
+                                const dJson = await dRes.json();
+                                return { id, json: dJson };
+                            }));
+                            renderProductHierarchicalBox({ ...p, designs }, catProductsList, { defaultChecked: false });
+                        } catch (e) { console.error(e); }
+                    }
+                }
+            } else if (type === 'category' && itemId) {
+                const category = catalogData.categorias.find(c => c.id === itemId);
+                if (category) {
+                    productFilterContainer.classList.remove('hidden');
+                    for (const p of category.productos) {
+                        try {
+                            const res = await fetch(`public/productos/${p.id}.json`);
+                            const manifest = await res.json();
+                            const designs = await Promise.all(Object.entries(manifest.designs || {}).map(async ([id, path]) => {
+                                const dRes = await fetch(path);
+                                const dJson = await dRes.json();
+                                return { id, json: dJson };
+                            }));
+                            renderProductHierarchicalBox({ ...p, designs }, productFilterList);
+                        } catch (e) { console.error(e); }
+                    }
+                }
+            } else if (type === 'product' && itemId) {
+                productFilterContainer.classList.remove('hidden');
+                try {
+                    const manifestRes = await fetch(`public/productos/${itemId}.json`);
+                    const manifest = await manifestRes.json();
+                    const prodInfo = productsData.find(p => p.id === itemId);
+                    const designs = await Promise.all(Object.entries(manifest.designs || {}).map(async ([id, path]) => {
+                        const res = await fetch(path);
+                        const json = await res.json();
+                        return { id, json };
+                    }));
+                    renderProductHierarchicalBox({ ...prodInfo, designs }, productFilterList, { isSingle: true });
+                } catch (e) { console.error(e); }
+            }
+            generateFinalUrl();
+        }
+
+        function renderProductHierarchicalBox(prod, container, options = {}) {
+            const isSingle = options.isSingle || false;
+            const defaultChecked = options.hasOwnProperty('defaultChecked') ? options.defaultChecked : true;
+            
+            const productBox = document.createElement('div');
+            productBox.className = 'product-config-card';
+            productBox.style.cssText = `background: white; border: 1px solid #e0e0e0; border-radius: 12px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);`;
+
+            const getCorrectPath = (url) => {
+                if (!url) return 'public/assets/images/image.png';
+                if (!url.startsWith('public/') && url.includes('assets/')) return 'public/' + url;
+                return url;
+            };
+
+            const prodImg = getCorrectPath(prod.thumbnail);
+
+            productBox.innerHTML = `
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: ${isSingle ? '0' : '15px'};">
+                    <div class="variant-info" style="gap: 12px;">
+                        <img src="${prodImg}" class="variant-thumb" style="width: 44px; height: 44px; border-radius: 6px; object-fit: contain;" onerror="this.src='public/assets/images/image.png'">
+                        <div style="font-weight: 700; color: var(--primary-color);">${prod.nombre}</div>
+                    </div>
+                    <label class="switch" style="${isSingle ? 'display: none;' : ''}">
+                        <input type="checkbox" value="${prod.id}" class="product-toggle" ${defaultChecked ? 'checked' : ''}>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="variants-config-box" style="display: ${defaultChecked ? 'block' : 'none'}; margin-top: 10px; padding-top: 10px; border-top: 1px solid #f0f0f0;">
+                    <div class="designs-container" style="display: flex; flex-direction: column; gap: 12px;">
+                        ${prod.designs.map(d => {
+                            const colors = d.json.modelos ? Object.keys(d.json.modelos) : [];
+                            const designImg = getCorrectPath(d.json.thumbnail);
+                            return `
+                                <div class="design-item-group" style="background: #f9f9f9; padding: 12px; border-radius: 10px; border: 1px solid #eee;">
+                                    <label class="checkbox-group" style="padding: 0 0 8px 0; border: none; border-bottom: 1px solid #eee; margin-bottom: 10px;">
+                                        <div class="variant-info" style="gap: 8px;">
+                                            <img src="${designImg}" style="width: 24px; height: 24px; object-fit: contain;" onerror="this.src='public/assets/images/image.png'">
+                                            <span style="font-size: 0.85rem; font-weight: 600;">Diseño ${d.id.replace('design-', '')}</span>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" class="p-design-toggle" data-product="${prod.id}" value="${d.id}" ${defaultChecked ? 'checked' : ''} ${prod.designs.length === 1 ? 'disabled' : ''}>
+                                            <span class="slider"></span>
+                                        </label>
+                                    </label>
+                                    <div class="design-colors-sub" style="margin-left: 32px; display: grid; gap: 4px; margin-bottom: 12px; border-bottom: 1px dashed #ddd; padding-bottom: 8px;">
+                                        ${colors.map(c => `
+                                            <label class="checkbox-group" style="padding: 2px 0; border: none;">
+                                                <div class="variant-info" style="gap: 8px;">
+                                                    <div class="color-symbol ${c}-symbol" style="width: 12px; height: 12px;"></div>
+                                                    <span style="font-size: 0.75rem; color: #555;">${colorTranslations[c] || c}</span>
+                                                </div>
+                                                <label class="switch">
+                                                    <input type="checkbox" class="p-color-toggle" data-design="${d.id}" value="${c}" checked ${colors.length === 1 ? 'disabled' : ''}>
+                                                    <span class="slider"></span>
+                                                </label>
+                                            </label>
+                                        `).join('')}
+                                    </div>
+                                    <div style="margin-left: 32px;">
+                                        <label style="font-size: 0.7rem; font-weight: 700; color: #444; display: block; margin-bottom: 4px;">URL de Compra Exclusiva</label>
+                                        <input type="url" class="p-buy-link" placeholder="Link para este diseño..." style="padding: 6px 10px; font-size: 0.75rem; border-radius: 6px; border: 1px solid #ccc; width: 100%; box-sizing: border-box;">
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+            const mainToggle = productBox.querySelector('.product-toggle');
+            const configBox = productBox.querySelector('.variants-config-box');
+            if (!isSingle) {
+                mainToggle.addEventListener('change', () => { configBox.style.display = mainToggle.checked ? 'block' : 'none'; generateFinalUrl(); });
+            }
+
+            productBox.querySelectorAll('.p-design-toggle').forEach(dt => {
+                const group = dt.closest('.design-item-group');
+                const updateSubState = () => {
+                    const subs = group.querySelectorAll('.p-color-toggle, .p-buy-link');
+                    subs.forEach(s => s.disabled = !dt.checked);
+                    group.style.opacity = dt.checked ? '1' : '0.5';
+                };
+                
+                dt.addEventListener('change', () => {
+                    if (dt.checked) {
+                        group.querySelectorAll('.p-color-toggle').forEach(ct => ct.checked = true);
+                    }
+                    updateSubState();
+                    
+                    // Sync with product: if all designs unchecked, uncheck product
+                    const checkedDesigns = productBox.querySelectorAll('.p-design-toggle:checked').length;
+                    if (checkedDesigns === 0 && mainToggle.checked && !mainToggle.disabled) {
+                        mainToggle.checked = false;
+                        mainToggle.dispatchEvent(new Event('change'));
+                    } else if (checkedDesigns > 0 && !mainToggle.checked) {
+                        mainToggle.checked = true;
+                        mainToggle.dispatchEvent(new Event('change'));
+                    }
+                });
+
+                // Sync with colors: if all colors unchecked, uncheck design
+                group.querySelectorAll('.p-color-toggle').forEach(ct => {
+                    ct.addEventListener('change', () => {
+                        const checkedColors = group.querySelectorAll('.p-color-toggle:checked').length;
+                        if (checkedColors === 0 && dt.checked && !dt.disabled) {
+                            dt.checked = false;
+                            dt.dispatchEvent(new Event('change'));
+                        } else if (checkedColors > 0 && !dt.checked) {
+                            dt.checked = true;
+                            dt.dispatchEvent(new Event('change'));
+                        }
+                    });
+                });
+
+                updateSubState(); // Initial sync
+            });
+
+            productBox.querySelectorAll('input').forEach(i => {
+                i.addEventListener('change', generateFinalUrl);
+                i.addEventListener('input', generateFinalUrl);
+            });
+            container.appendChild(productBox);
+        }
+
+        function generateFinalUrl() {
+            const type = linkType.value;
+            const itemId = itemSelector.value;
+            const baseUrl = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+            let path = type === 'general' ? 'index.html' : '';
+            
+            if ((type === 'general' || type === 'category') && (type === 'general' || itemId)) {
+                path = type === 'general' ? 'categorias.html' : `productos.html?cat=${itemId}`;
+                const products = [];
+                document.querySelectorAll('.product-toggle:checked').forEach(toggle => {
+                    const pid = toggle.value;
+                    const card = toggle.closest('.product-config-card');
+                    const designGroups = [];
+                    card.querySelectorAll('.p-design-toggle:checked').forEach(dt => {
+                        const did = dt.value;
+                        const group = dt.closest('.design-item-group');
+                        const colors = Array.from(group.querySelectorAll('.p-color-toggle:checked')).map(c => c.value);
+                        const buy = group.querySelector('.p-buy-link').value.trim();
+                        designGroups.push(`${did}:${colors.join(',')}:${encodeURIComponent(buy)}`);
+                    });
+                    if (designGroups.length > 0) {
+                        products.push(`${pid}.${designGroups.join('|')}`);
+                    }
+                });
+                if (products.length > 0) {
+                    const separator = path.includes('?') ? '&' : '?';
+                    path += `${separator}show=${encodeURIComponent(products.join(';'))}`;
+                }
+            } else if (type === 'product' && itemId) {
+                const card = document.querySelector('.product-config-card');
+                const variants = [];
+                card.querySelectorAll('.p-design-toggle:checked').forEach(dt => {
+                    const did = dt.value;
+                    const group = dt.closest('.design-item-group');
+                    const colors = Array.from(group.querySelectorAll('.p-color-toggle:checked')).map(c => c.value);
+                    const buy = group.querySelector('.p-buy-link').value.trim();
+                    variants.push(`${did}:${colors.join(',')}:${encodeURIComponent(buy)}`);
+                });
+                path = `viewer.html?id=${itemId}&v=${encodeURIComponent(variants.join('|'))}&nb=1`;
+            }
+
+            const url = new URL(baseUrl + path);
+            ['utm_source', 'utm_medium', 'utm_content'].forEach(p => {
+                const el = document.getElementById(p);
+                if (el && el.value.trim()) url.searchParams.set(p, el.value.trim());
+            });
+            const campaign = customCampaignName.value || utmCampaign.value;
+            if (campaign) url.searchParams.set('utm_campaign', campaign);
+
+            const finalUrl = url.toString();
+            generatedUrl.textContent = finalUrl;
+            if (customMessage.value.trim()) {
+                messagePreviewSection.classList.remove('hidden');
+                finalMessage.textContent = customMessage.value.trim() + '\n\n' + finalUrl;
+            } else {
+                messagePreviewSection.classList.add('hidden');
+            }
+        }
+
+        function showToast(msg) {
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        [linkType, itemSelector, utmSource, utmMedium, utmContent, utmCampaign, customCampaignName, customMessage].forEach(el => {
+            if (el) {
+                el.addEventListener('change', generateFinalUrl);
+                el.addEventListener('input', generateFinalUrl);
+            }
+        });
+        linkType.addEventListener('change', updateItemSelector);
+        itemSelector.addEventListener('change', updateVariantFilter);
+
+        selectAllBtn.onclick = () => {
+            document.querySelectorAll('.product-toggle, .p-design-toggle').forEach(t => {
+                if (!t.disabled) {
+                    t.checked = true;
+                    t.dispatchEvent(new Event('change'));
+                }
+            });
+            generateFinalUrl();
+        };
+
+        deselectAllBtn.onclick = () => {
+            document.querySelectorAll('.product-toggle, .p-design-toggle').forEach(t => {
+                if (!t.disabled) {
+                    t.checked = false;
+                    t.dispatchEvent(new Event('change'));
+                }
+            });
+            generateFinalUrl();
+        };
+
+        function copyToClipboard(text) {
+            if (!navigator.clipboard) {
+                // Fallback para navegadores antiguos o contextos no seguros/locales
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-9999px";
+                textArea.style.top = "0";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showToast('¡Copiado con éxito!');
+                } catch (err) {
+                    console.error('Error al copiar:', err);
+                }
+                document.body.removeChild(textArea);
+                return;
+            }
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('¡Copiado con éxito!');
+            }).catch(err => {
+                console.error('Error al copiar:', err);
+            });
+        }
+
+        copyBtn.onclick = () => {
+            copyToClipboard(generatedUrl.textContent);
+        };
+
+        copyFullBtn.onclick = () => {
+             const text = finalMessage.textContent || generatedUrl.textContent;
+             copyToClipboard(text);
+        };
+
+        shareWAP.onclick = () => {
+            const text = finalMessage.textContent || generatedUrl.textContent;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        };
+
+        openBtn.onclick = () => {
+            window.open(generatedUrl.textContent, '_blank');
+        };
+    </script>
+</body>
+</html>

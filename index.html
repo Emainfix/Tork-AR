@@ -35,6 +35,12 @@
             <img src="public/assets/logos/logo-essity.png" alt="Logo de Essity" class="essity-logo-image">
         </footer>
     </div>
+    <script>
+        const btn = document.querySelector('.btn-home');
+        if (btn && window.location.search) {
+            btn.href = 'categorias.html' + window.location.search;
+        }
+    </script>
     <script src="js/common.js"></script>
 </body>
 </html>

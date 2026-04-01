@@ -15,7 +15,7 @@
             </a>
         </header>
         <nav class="top-nav">
-            <a href="index.html" class="back-button">
+            <a href="index.html" class="back-button" id="regresarBtn">
                 <img src="public/assets/icon/boton regresar blanco.svg" alt="Regresar" class="fab-icon-img">
             </a>
             <h1 class="nav-title">Sistemas Tork</h1>
@@ -32,13 +32,37 @@
 
     <script src="js/common.js"></script>
     <script>
+        const params = new URLSearchParams(window.location.search);
+        const showParam = params.get('show');
+        const showPids = showParam ? showParam.split(';').map(p => p.split('.')[0]) : null;
+        const noBack = params.get('nb') === '1' || !!showParam;
+
+        if (noBack) {
+            const btn = document.getElementById('regresarBtn');
+            if (btn) btn.style.display = 'none';
+            // También ocultamos el link del logo para estar seguros
+            const logoLink = document.querySelector('.main-header a');
+            if (logoLink) {
+                logoLink.onclick = (e) => e.preventDefault();
+                logoLink.style.cursor = 'default';
+            }
+        }
+
         fetch('public/catalog.json')
             .then(res => res.json())
             .then(data => {
                 const grid = document.getElementById('categories-grid');
                 data.categorias.forEach(cat => {
+                    // Si hay 'show', solo mostrar categorías que tengan esos productos
+                    if (showPids && !cat.productos.some(p => showPids.includes(p.id))) {
+                        return;
+                    }
+
                     const item = document.createElement('a');
-                    item.href = `productos.html?cat=${cat.id}`;
+                    const linkParams = new URLSearchParams(window.location.search);
+                    linkParams.set('cat', cat.id);
+                    item.href = `productos.html?${linkParams.toString()}`;
+                    
                     item.className = "category-item";
                     item.innerHTML = `
                         <div class="category-icon-wrapper">

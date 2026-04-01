@@ -15,7 +15,7 @@
             </a>
         </header>
         <nav class="top-nav">
-            <a href="categorias.html" class="back-button">
+            <a href="categorias.html" class="back-button" id="regresarBtn">
                 <img src="public/assets/icon/boton regresar blanco.svg" alt="Regresar" class="fab-icon-img">
             </a>
             <h1 class="nav-title" id="cat-title">Productos</h1>
@@ -34,26 +34,68 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const catId = urlParams.get('cat');
+        const showParam = urlParams.get('show');
+        const noBack = urlParams.get('nb') === '1' || !!showParam;
+
+        if (noBack) {
+            const btn = document.getElementById('regresarBtn');
+            if (btn) btn.style.display = 'none';
+            const logoLink = document.querySelector('.main-header a');
+            if (logoLink) {
+                logoLink.onclick = (e) => e.preventDefault();
+                logoLink.style.cursor = 'default';
+            }
+        }
 
         fetch('public/catalog.json')
             .then(res => res.json())
             .then(data => {
-                // Si no hay categoría en la URL, podemos mostrar la primera por defecto o manejar el error
                 const category = data.categorias.find(c => c.id === catId) || data.categorias[0];
                 
                 if (category) {
                     document.getElementById('cat-title').textContent = category.nombre;
                     const grid = document.getElementById('products-grid');
+                    
+                    const productFilters = {};
+                    const showParam = urlParams.get('show');
+                    const allowedProductsMeta = showParam ? showParam.split(';') : null;
+
+                    if (allowedProductsMeta) {
+                        allowedProductsMeta.forEach(item => {
+                            const dotIndex = item.indexOf('.');
+                            if (dotIndex === -1) return;
+                            const pid = item.substring(0, dotIndex);
+                            const variantString = item.substring(dotIndex + 1);
+                            
+                            productFilters[pid] = {
+                                variants: variantString && variantString !== '' ? variantString : null
+                            };
+                        });
+                    }
+
                     category.productos.forEach(prod => {
+                        if (allowedProductsMeta && !productFilters[prod.id]) return;
+
                         const card = document.createElement('a');
                         
-                        // Si es el dispensador Matic, usamos matic.html que es la página que ya tenías configurada
-                        // Para otros productos futuros, se usará el viewer.html genérico
-                        card.href = `viewer.html?id=${prod.id}`;
+                        let viewerUrl = `viewer.html?id=${prod.id}`;
+                        const filter = productFilters[prod.id];
+                        if (filter) {
+                            if (filter.variants) viewerUrl += `&v=${encodeURIComponent(filter.variants)}`;
+                            if (filter.buy) viewerUrl += `&buy=${encodeURIComponent(filter.buy)}`;
+                        }
+                        
+                        // Arrastrar parámetros de configuración (nb) y UTMs
+                        ['nb', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(p => {
+                            if (urlParams.has(p)) {
+                                const sep = viewerUrl.includes('?') ? '&' : '?';
+                                viewerUrl += `${sep}${p}=${encodeURIComponent(urlParams.get(p))}`;
+                            }
+                        });
 
+                        card.href = viewerUrl;
                         card.style.cssText = "display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 8px; padding: 15px; text-decoration: none; color: #333;";
                         
-                        // Aseguramos que si el thumbnail no existe, use una imagen de respaldo (image.png)
                         const thumbSrc = prod.thumbnail || 'public/assets/images/image.png';
                         
                         card.innerHTML = `

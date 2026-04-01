@@ -215,22 +215,64 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Obtener el ID del producto desde los parámetros de la URL
+    // Obtener los parámetros de la URL
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id') || 'tork-matic-dispensador-rollo';
+
+    const variantMap = {};
+    const vParam = urlParams.get('v');
+    if (vParam) {
+        vParam.split('|').forEach(group => {
+            const parts = group.split(':');
+            const dId = parts[0];
+            const cList = parts[1];
+            // Re-aplicando fijación para evitar corte de URLs con ':'
+            const buyOverride = parts.length > 2 ? decodeURIComponent(parts.slice(2).join(':')) : null;
+            if (dId && cList) {
+                variantMap[dId] = {
+                    colors: cList.split(','),
+                    buy: buyOverride
+                };
+            }
+        });
+    }
+
+    const allowedDesigns = urlParams.get('designs') ? urlParams.get('designs').split(',') : (vParam ? Object.keys(variantMap) : null);
+    const allowedColors = urlParams.get('colors') ? urlParams.get('colors').split(',') : null; // Global colors (legacy)
+
     loadProductData(productId);
 
-    // Configurar el botón Volver
-    document.querySelector('.back-button')?.addEventListener('click', () => {
-        window.history.back();
-    });
+    // Configurar el botón Volver o esconderlo
+    const regresarBtn = document.querySelector('.back-button');
+    const noBack = urlParams.get('nb') === '1';
+
+    if (noBack && regresarBtn) {
+        regresarBtn.style.display = 'none';
+        const logoLink = document.querySelector('.main-header a');
+        if (logoLink) logoLink.onclick = (e) => e.preventDefault();
+    } else if (regresarBtn) {
+        regresarBtn.addEventListener('click', () => {
+            window.history.back();
+        });
+    }
 
     function renderDesignOptions() {
         const designContainer = document.getElementById('design-thumbnails-container');
         if (!designContainer) return;
 
         designContainer.innerHTML = '';
-        Object.values(productData).forEach(design => {
+
+        let filteredDesigns = Object.values(productData);
+        if (allowedDesigns) {
+            filteredDesigns = filteredDesigns.filter(d => allowedDesigns.includes(d.id));
+        }
+
+        // Si el diseño actual no está en los permitidos, cambiarlo
+        if (allowedDesigns && !allowedDesigns.includes(currentDesign)) {
+            currentDesign = allowedDesigns[0] || 'design-1';
+        }
+
+        filteredDesigns.forEach(design => {
             const btn = document.createElement('button');
             btn.className = `thumb-btn ${design.id === currentDesign ? 'active' : ''}`;
             btn.dataset.id = design.id;
@@ -247,6 +289,9 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             designContainer.appendChild(btn);
         });
+
+        // Asegurar que la sección siempre sea visible, incluso con 1 solo diseño
+        designContainer.parentElement.style.display = 'block';
     }
 
     function updateUI() {
@@ -257,11 +302,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navTitle && categoryName) navTitle.textContent = categoryName;
         if (productTitle && productName) productTitle.innerHTML = productName;
 
-        // Determinar colores disponibles
-        const availableColors = Object.keys(data.models);
+        // Determinar colores disponibles para ESTE diseño específico
+        const vInfo = variantMap[currentDesign];
+        const designAllowedColors = vInfo ? vInfo.colors : allowedColors;
 
-        // Si el color actual no existe en este diseño o es nulo, elegir el primero
-        if (!currentColor || !data.models[currentColor]) {
+        let availableColors = Object.keys(data.models);
+        if (designAllowedColors) {
+            availableColors = availableColors.filter(c => designAllowedColors.includes(c));
+        }
+
+        // Si el color actual no existe en este diseño o no está permitido, elegir el primero disponible
+        if (!currentColor || !availableColors.includes(currentColor)) {
             currentColor = availableColors[0];
         }
 
@@ -273,7 +324,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const btn = document.createElement('button');
                 btn.className = `color-btn ${colorId === currentColor ? 'active' : ''}`;
                 btn.dataset.color = colorId;
-                const translatedName = colorTranslations[colorId] || (colorId.charAt(0).toUpperCase() + colorId.slice(1));
+
+                // Traducciones consistentes
+                const translations = { 'black': 'Negro', 'white': 'Blanco', 'steel': 'Acero' };
+                const translatedName = translations[colorId] || (colorId.charAt(0).toUpperCase() + colorId.slice(1));
+
                 btn.innerHTML = `
                     <span class="color-circle ${colorId}-color"></span>
                     <span class="color-label">${translatedName}</span>
@@ -284,6 +339,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
                 colorContainer.appendChild(btn);
             });
+
+            // Asegurar que la sección siempre sea visible, incluso con 1 solo color
+            colorContainer.parentElement.style.display = 'block';
         }
 
         // Elements to animate
@@ -617,16 +675,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnBuy) {
         btnBuy.addEventListener('click', () => {
             const data = productData[currentDesign];
-            if (data) {
-                const activeColorBtn = document.querySelector('.color-btn.active');
-                const activeColor = activeColorBtn ? activeColorBtn.getAttribute('data-color') : Object.keys(data.models)[0];
-                const modelData = data.models[activeColor];
+            if (!data) return;
 
-                const finalLink = (modelData && modelData.buyLink) ? modelData.buyLink : data.buyLink;
+            // PRIORIDAD 1: Link específico del diseño seleccionado (vía parámetro 'v')
+            const vInfo = variantMap[currentDesign];
+            if (vInfo && vInfo.buy) {
+                window.open(vInfo.buy, '_blank');
+                return;
+            }
 
-                if (finalLink) {
-                    window.open(finalLink, '_blank');
-                }
+            // PRIORIDAD 2: Link global por URL (parámetro 'buy')
+            const customBuyLink = urlParams.get('buy');
+            if (customBuyLink && customBuyLink !== '') {
+                window.open(customBuyLink, '_blank');
+                return;
+            }
+
+            // PRIORIDAD 3: Link del manifiesto (color específico -> diseño general)
+            const activeColorBtn = document.querySelector('.color-btn.active');
+            const activeColor = activeColorBtn ? activeColorBtn.getAttribute('data-color') : Object.keys(data.models)[0];
+            const modelData = data.models[activeColor];
+
+            const finalLink = (modelData && modelData.buyLink) ? modelData.buyLink : data.buyLink;
+            if (finalLink) {
+                window.open(finalLink, '_blank');
             }
         });
     }
