@@ -761,7 +761,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeOnboarding() {
         if (onboardingOverlay) {
             onboardingOverlay.classList.add('hidden');
-            localStorage.setItem('onboardingShown', 'true');
+            // localStorage.setItem('onboardingShown', 'true'); // Desactivado temporalmente para testeo
             window.removeEventListener('resize', updateOnboarding);
             // Al terminar o saltar el tutorial, regresamos suavemente al inicio de la página
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -770,7 +770,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const onboardingShown = localStorage.getItem('onboardingShown');
 
-    if (onboardingOverlay && !onboardingShown) {
+    if (onboardingOverlay /* && !onboardingShown */) { // Desactivado el check de 'onboardingShown' temporalmente para testeo
         setTimeout(() => {
             onboardingOverlay.classList.remove('hidden');
             updateOnboarding();
