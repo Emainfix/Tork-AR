@@ -730,15 +730,20 @@ document.addEventListener('DOMContentLoaded', () => {
             let cardTop;
 
             if (currentOnboardingStep === 0) {
-                cardTop = rect.bottom + 40;
+                // Cálculo condicional: en escritorio no hay superposición, en celulares sí (25%)
+                cardTop = isDesktop ? rect.bottom : rect.bottom - (cardRect.height / 4);
             } else {
                 cardTop = rect.top - cardRect.height - 40;
             }
 
             let cardLeft = rect.left + rect.width / 2 - cardRect.width / 2;
 
-            if (cardTop < 20) cardTop = rect.bottom + 40;
-            if (cardTop + cardRect.height > window.innerHeight - 20) cardTop = window.innerHeight - cardRect.height - 100;
+            // Ajustes finales de seguridad para evitar salirse de pantalla
+            const safetyBottom = isDesktop ? 20 : 10;
+            if (cardTop < 60) cardTop = isDesktop ? rect.bottom : rect.bottom - (cardRect.height / 4);
+            if (cardTop + cardRect.height > window.innerHeight - safetyBottom) {
+                cardTop = window.innerHeight - cardRect.height - safetyBottom;
+            }
 
             if (cardLeft < 20) cardLeft = 20;
             if (cardLeft + cardRect.width > window.innerWidth - 20) {

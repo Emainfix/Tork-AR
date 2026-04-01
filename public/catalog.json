@@ -2,12 +2,12 @@
   "categorias": [
     {
       "id": "higienicos",
-      "nombre": "Higienicos",
+      "nombre": "Higiénicos",
       "thumbnail": "public/assets/icon/higienicos.svg",
       "productos": [
         {
           "id": "tork-higienico-bobina",
-          "nombre": "Tork Dispensador Higienico en Bobina",
+          "nombre": "Tork Dispensador Higiénico en Bobina",
           "thumbnail": "public/assets/images/Higienicos/Tork_Dispensador_Higiénico_en_Bobina/Tork_Dispensador_Higiénico_en_Bobina_Negro.jpg"
         },
         {

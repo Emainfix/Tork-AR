@@ -4,7 +4,7 @@
     --text-blue: #003366;
     --white: #ffffff;
     --border-gray: #e0e0e0;
-    --font-stack: 'Roboto', sans-serif;
+    --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -1322,23 +1322,25 @@ button[slot="hotspot-depth"]::after {
 
 .onboarding-skip {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    bottom: calc(15px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 10px 24px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     z-index: 10006;
-    transition: background 0.2s;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .onboarding-skip:hover {
     background: rgba(0, 0, 0, 0.5);
+    transform: translateX(-50%) scale(1.05);
 }
 
 .category-list {
@@ -1364,17 +1366,17 @@ button[slot="hotspot-depth"]::after {
 }
 
 .category-icon-wrapper {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 18px;
+    margin-right: 20px;
 }
 
 .category-icon {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
